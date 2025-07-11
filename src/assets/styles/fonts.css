@@ -1,0 +1,20 @@
+@font-face {
+  font-family: 'ChampionGothic';
+  src: url('/src/assets/fonts/ChampionGothic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MagicVintage';
+  src: url('/src/assets/fonts/MagicVintage.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Obviously';
+  src: url('/src/assets/fonts/Obviously.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}

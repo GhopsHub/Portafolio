@@ -1,18 +1,11 @@
-import { Link } from "react-router-dom"
+import Navbar from "../components/Navbar/navbar"
 
 export default function Contact() {
   return (
     <div>
-      <h1>Contacto</h1>
-		  <Link to="/">Volver al Inicio</Link>
-		  
-<div className="container">
-  <h1 className="header">Título</h1>
-  <button className="button">Click</button>
-</div>
+      <Navbar />
 
-
-
+      
     </div>
   )
 }

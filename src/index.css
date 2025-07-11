@@ -1,8 +1,8 @@
+@import './assets/styles/base.css';
+@import './assets/styles/components.css';
+@import './assets/styles/fonts.css';
+@import './assets/styles/utilities.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-/* Base para el body */
-body {
-  @apply bg-amber-600 text-black antialiased;
-}
