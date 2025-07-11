@@ -4,7 +4,7 @@ import Contact from "./pages/Contact"
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/Portafolio">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/contact" element={<Contact />} />

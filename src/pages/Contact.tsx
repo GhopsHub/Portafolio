@@ -5,7 +5,14 @@ export default function Contact() {
     <div>
       <h1>Contacto</h1>
 		  <Link to="/">Volver al Inicio</Link>
-		  <p>prueba despliegue</p>
+		  
+<div className="container">
+  <h1 className="header">Título</h1>
+  <button className="button">Click</button>
+</div>
+
+
+
     </div>
   )
 }
