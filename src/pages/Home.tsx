@@ -1,61 +1,35 @@
-// import { TextRotate } from "../components/TextRotate/text-rotate"
-// import { LayoutGroup, motion } from 'framer-motion'
-import Navbar from "../components/Navbar/navbar"
-// import me from "../assets/images/me.png"
-
-
-
+import character6 from "../assets/images/Characters/character6.png"
 
 export default function Home() {
   return (
-    <div>
-      <Navbar />
+    <div className="min-h-[calc(100vh-52px)] flex items-center justify-center px-4">
+      <div className="flex flex-col-reverse md:flex-row items-center justify-center gap-4 md:gap-4 w-full max-w-5xl">
 
-      <div className="flex flex-wrap text-center">
-        <h1 className="text-5xl w-full font-champion clr-lg uppercase">
-          julian becerra diaz
-        </h1>
-        <h1 className="text-5xl w-full font-champion clr-g uppercase">
-          ghops
-        </h1>
+        {/* Descripcion */}
+        <div className="text-center md:text-center md:mr-4">
+          <h1 className="text-[22px] mb-2 uppercase font-champion">
+            Haciendo que las ideas se vean bien en internet
+          </h1>
+          <p className="font-sans max-w-md">
+            Julian, un desarrollador full stack en formación que colabora con equipos, ideas y proyectos para crear experiencias web modernas, construir presencia digital y escalar ideas que dejan huella.
+          </p>
+        </div>
 
+        {/* Imagen + texto */}
+        <div className="relative flex justify-center items-center h-[300px] sm:h-[350px] md:h-[400px]">
+          <span className="absolute font-champion uppercase text-[100px] sm:text-[130px] md:text-[160px] clr-g z-0 select-none pointer-events-none">
+            ghops
+          </span>
 
-        {/* <img src={me} alt="Mi foto" /> */}
+          {/* Imagen encima */}
+          <img
+            src={character6}
+            alt="Mi foto"
+            className="relative z-10 w-52 sm:w-60 md:w-72 lg:w-80 h-auto"
+          />
+        </div>
+
       </div>
-
-      {/* <LayoutGroup>     <motion.div
-        className="text-2xl sm:text-3xl md:text-5xl flex items-center font-overusedGrotesk font-light"
-        layout>
-        <motion.span className="pt-1 sm:pt-1.5 md:pt-2" layout transition={{ type: "spring", damping: 30, stiffness: 400 }}>
-          Un Programador{" "}
-        </motion.span>
-        <TextRotate
-          texts={[
-            "Creativo",
-            "Constante🥇",
-            "Apasionado",
-            "Curioso",
-            "Disciplinado 💪",
-            "Resolutivo",
-            "Adaptable",
-          ]}
-          mainClassName="ml-2 text-white px-3 bg-purple-600 overflow-hidden py-1.5 justify-center rounded-lg"
-          staggerFrom="last"
-          initial={{ y: "100%" }}
-          animate={{ y: 0 }}
-          exit={{ y: "-120%" }}
-          staggerDuration={0.025}
-          splitLevelClassName="overflow-hidden pb-1"
-          transition={{ type: "spring", damping: 30, stiffness: 400 }}
-          rotationInterval={2000}
-        />
-      </motion.div>
-      </LayoutGroup> */}
-
-
-
-
-
     </div>
   )
 }

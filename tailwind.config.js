@@ -10,6 +10,7 @@ export default {
         champion: ['ChampionGothic'],
         vintage: ['MagicVintage'],
         obviously: ['Obviously'],
+        sans: ['DMSans'],
       },
     },
   },

@@ -1,5 +1,7 @@
 body {
-  @apply text-white antialiased;
-  @apply bg-[#131313];
-  @apply min-h-screen;
+  @apply text-white antialiased min-h-screen bg-dark w-full;
+}
+
+.page-wrapper {
+  @apply antialiased w-full;
 }

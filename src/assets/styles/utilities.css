@@ -1,7 +1,8 @@
-.clr-lg { color: rgb(194, 194, 194); }  /* light gray */
-.clr-g  { color: rgb(54, 54, 54); }     /* gray */
-.clr-bg { color: rgb(230, 226, 222); }  /* beige */
+/* TEXT COLORS */
+.clr-lg { color: rgb(194, 194, 194); }   /* light gray */
+.clr-g  { color: rgb(54, 54, 54); }      /* gray */
+.clr-bg { color: rgb(230, 226, 222); }   /* beige */
 
-
-/* BACKGROUNDS */
-.bg-lg { background-color: rgb(230, 226, 222); }   /* Fondo beige */
+/* BACKGROUND COLORS */
+.bg-lg { background-color: rgb(230, 226, 222); }   /* beige */
+.bg-dark { background-color: rgb(19, 19, 19); }    /* fondo dark personalizado */
