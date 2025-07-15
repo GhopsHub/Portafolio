@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from "react-router-dom";
-import logo from '../../../../assets/images/ghops.png';
+import logo from '../../../assets/images/ghops.png';
 import { Menu } from 'lucide-react';
 
 export default function Navbar() {
@@ -16,7 +16,8 @@ export default function Navbar() {
         </Link>
 
         {/* Menú escritorio */}
-        <ul className="hidden sm:flex gap-8 text-xl uppercase font-champion">
+        <ul className="hidden sm:flex gap-8 text-xl uppercase font-champion antialiased">
+          <li><Link to="/">Home</Link></li>
           <li><Link to="/proyects">Proyects</Link></li>
           <li><Link to="/about">About</Link></li>
           <li><Link to="/contact">Contact</Link></li>
@@ -35,6 +36,7 @@ export default function Navbar() {
       {/* Menú para móvil */}
       {isOpen && (
         <ul className="absolute left-0 right-0 bg-dark sm:hidden flex flex-col items-center gap-5 uppercase font-champion text-xl py-5 mt-1 rounded-b-lg shadow-lg">
+          <li><Link to="/" onClick={() => setIsOpen(false)}>Home</Link></li>
           <li><Link to="/proyects" onClick={() => setIsOpen(false)}>Proyects</Link></li>
           <li><Link to="/about" onClick={() => setIsOpen(false)}>About</Link></li>
           <li><Link to="/contact" onClick={() => setIsOpen(false)}>Contact</Link></li>

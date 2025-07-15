@@ -1,5 +1,6 @@
 import charactermain from "../../assets/images/Characters/charactermain.png";
 import MarqueeText from "../components/Animations/Marquee/Marquee";
+import { ListSkills } from "../components/Animations/ListSkills/ListSkills";
 
 export default function Home() {
   return (
@@ -47,9 +48,18 @@ export default function Home() {
       </div>
 
 
-      <div className="bg-red-300" style={{ height: "300vh" }}>
-        
-    </div>
+      
+        <div className="text-center">
+          <h2 className="uppercase font-champion mt-20 mb-10 text-[28px] sm:text-[36px] md:text-[48px] xl:text-[55px] ">
+            ¿En qué puedo ayudarte?
+          </h2>
+
+        </div>
+
+        <ListSkills />
+
+
+
 
     </>
   );
