@@ -1,13 +1,13 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
-import Navbar from "./components/Navbar/navbar"
-import Home from "./pages/Home"
-import Proyects from "./pages/Proyects"
-import About from "./pages/About"
-import Contact from "./pages/Contact"
+import Navbar from "./js/components/UI/Navbar/navbar" 
+import Home from "./js/pages/Home"
+import Proyects from "./js/pages/Proyects"
+import About from "./js/pages/About"
+import Contact from "./js/pages/Contact"
 
 function App() {
   return (
-    <BrowserRouter basename="/Portafolio">
+    <BrowserRouter basename="/Portafolio/">
       <Navbar />
       <div className="page-wrapper">
         <Routes>

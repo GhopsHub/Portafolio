@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from "react-router-dom";
-import logo from "../../assets/images/logo.png";
+import logo from '../../../../assets/images/ghops.png';
 import { Menu } from 'lucide-react';
 
 export default function Navbar() {

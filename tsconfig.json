@@ -9,15 +9,15 @@
     }
   ],
   "compilerOptions": {
-    "baseUrl": "./src",
-    "types": [
-      "node"
-    ],
+    "baseUrl": "./src/js",
     "paths": {
       "@/*": [
         "*"
       ]
     },
+    "types": [
+      "node"
+    ],
     "strict": true,
     "forceConsistentCasingInFileNames": true
   }
