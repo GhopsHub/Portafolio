@@ -1,7 +1,7 @@
-import charactercontact from "../../assets/images/Characters/charactercontact.png"
-import { ButtonPages } from "@/components/UI/buttonPages"
+import characterprojects from "../../assets/images/Characters/characterprojects.png"
+import { ButtonPages } from "@/components/UI/buttonPages";
 
-export default function Contact() {
+export default function Projects() {
   return (
     <div>
       <section className="min-h-[calc(100vh-52px)] flex items-center justify-center px-4 overflow-hidden">
@@ -10,7 +10,7 @@ export default function Contact() {
           {/* Texto descriptivo */}
           <div className="w-full md:w-1/2 text-center md:text-left">
             <h1 className="text-[28px] sm:text-[36px] md:text-[48px] xl:text-[55px] mb-6 uppercase font-champion leading-tight">
-              ¡Comencemos!
+             Código con resultado.
             </h1>
           </div>
 
@@ -18,7 +18,7 @@ export default function Contact() {
           <div className="relative w-full md:w-1/2 flex items-center justify-center h-[300px] sm:h-[350px] md:h-[400px]">
             {/* Imagen encima */}
             <img
-              src={charactercontact}
+              src={characterprojects}
               alt="Mi foto"
               className="relative z-10 w-[180px] sm:w-[230px] md:w-[270px] lg:w-[300px] xl:w-[300px] h-auto"
             />
@@ -26,10 +26,26 @@ export default function Contact() {
         </div>
       </section>
 
+      <div>
+        <h2>SakuraRent</h2>
+      </div>
+
+      <div>
+        <h2>SakuraRent Movil</h2>
+      </div>
+
+      <div>
+        <h3>GhopStore</h3>
+      </div>
+
+      <div>
+        <h3>StamPurr</h3>
+      </div>
+
       {/* Paginacion */}
       <ButtonPages
-        left={{ to: "/about", label: "about" }}
-        right={{ to: "/", label: "home" }}
+        left={{ to: "/", label: "home" }}
+        right={{ to: "/about/", label: "about" }}
       />
 
     </div>

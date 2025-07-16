@@ -4,6 +4,8 @@ import {
 	Hammer,
 	AppWindow,
 	Brush,
+	Plus,
+	Play,
 } from "lucide-react";
 
 export function ListSkills() {
@@ -32,9 +34,22 @@ export function ListSkills() {
 			icon: <Brush />,
 			href: "#",
 		},
+		{
+			title: "Contenido digital",
+			description: "Tengo experiencia creando videos para internet, combinando creatividad y comunicación visual.",
+			icon: <Play />,
+			href: "#",
+		},
+		{
+			title: "Otros",
+			description: "Sé de programación, pero también tengo conocimientos básicos en otros programas y habilidades generales en diferentes áreas.",
+			icon: <Plus />,
+			href: "#",
+		},
 	];
 	return (
-		<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-10 justify-items-center">
+		<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-10 justify-items-center mb-20 mt-32">
+
 			{features.map((feature, index) => (
 				<Feature key={feature.title} {...feature} index={index} />
 			))}

@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
 import logo from '../../../assets/images/ghops.png';
+import { UnderLine } from "../Animations/UnderLine/underLine";
 
 export default function Footer() {
 	return (
-		<footer className="bg-dark text-white shadow-[0_-4px_10px_rgba(255,255,255,0.1)] z-10">
-			<div className="max-w-7xl mx-auto px-4 py-6 flex flex-col gap-6">
+		<footer className="text-white shadow-[0_-4px_10px_rgba(255,255,255,0.1)] z-10">
+			<div className="w-full max-w-6xl mx-auto px-4 sm:px-10 md:px-20 py-6 flex flex-col gap-6 mb-10">
 
 				{/* Logo */}
 				<div>
@@ -16,16 +17,29 @@ export default function Footer() {
 					<hr className="border-t border-g mt-4" />
 				</div>
 
-				{/* Lista de redes */}
-				<ul className="flex flex-col gap-2 text-sm">
-					<li><a href="#">GitHub</a></li>
-					<li><a href="#">Discord</a></li>
-					<li><a href="#">Gmail</a></li>
-					<li><a href="#">Instagram</a></li>
-					<li><a href="#">TikTok</a></li>
-					<li><a href="#">LinkedIn</a></li>
-				</ul>
+				<div>
+					<h2 className="font-champion uppercase clr-lg text-xl">socials</h2>
+				</div>
 
+				<ul className="flex gap-7 text-sm">
+
+					{/* GMAIL */}
+					<UnderLine>
+						<a href="https://mail.google.com/mail/?view=cm&to=julianbecerra432@gmail.com"
+							target="_blank"
+							rel="noopener noreferrer">Gmail</a>
+					</UnderLine>
+
+					{/* INSTAGRAM  */}
+					<UnderLine>
+						<li><a href="https://www.instagram.com/ghops_ing/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+					</UnderLine>
+
+					{/* TikTok */}
+					<UnderLine>
+						<li><a href="https://www.tiktok.com/@ghops_ongs" target="_blank" rel="noopener noreferrer">TikTok</a></li>
+					</UnderLine>
+				</ul>
 			</div>
 		</footer>
 	);

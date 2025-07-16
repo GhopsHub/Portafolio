@@ -1,12 +1,31 @@
-/* TEXT COLORS */
-.clr-lg { color: rgb(194, 194, 194); }   
-.clr-g  { color: rgb(54, 54, 54); }      
-.clr-bg { color: rgb(230, 226, 222); } 
+/*? TEXT COLORS */
+.clr-lg {
+	color: rgb(194, 194, 194);
+}
 
-/* BACKGROUND COLORS */
-.bg-lg { background-color: rgb(230, 226, 222); }  
-.bg-dark { background-color: rgb(19, 19, 19); }    
+.clr-g {
+	color: rgb(54, 54, 54);
+}
 
-/* Bordes */
-.border-g  {  border-color: rgb(54, 54, 54); }      
+.clr-bg {
+	color: rgb(230, 226, 222);
+}
+
+.clr-cc {
+	color: rgb(212, 99, 79)
+}
+
+/*? BACKGROUND COLORS */
+.bg-lg {
+	background-color: rgb(230, 226, 222);
+}
+
+.bg-dark {
+	background-color: rgb(19, 19, 19);
+}
+
+/*? Bordes */
+.border-g {
+	border-color: rgb(54, 54, 54);
+}
 

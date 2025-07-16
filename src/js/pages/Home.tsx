@@ -1,6 +1,7 @@
 import charactermain from "../../assets/images/Characters/charactermain.png";
 import MarqueeText from "../components/Animations/Marquee/Marquee";
 import { ListSkills } from "../components/Animations/ListSkills/ListSkills";
+import { ButtonPages } from "@/components/UI/buttonPages";
 
 export default function Home() {
   return (
@@ -11,11 +12,11 @@ export default function Home() {
           {/* Texto descriptivo */}
           <div className="w-full md:w-1/2 text-center md:text-left">
             <h1 className="text-[28px] sm:text-[36px] md:text-[48px] xl:text-[55px] mb-6 uppercase font-champion leading-tight">
-              Haciendo que las ideas se vean bien en internet
+              Tu idea, mi código.
             </h1>
 
             <p className="font-sans text-base sm:text-lg md:text-xl max-w-md mx-auto md:mx-0">
-              Soy Julian, un desarrollador full stack en formación que colabora con equipos, ideas y proyectos para crear experiencias web modernas, construir presencia digital y escalar ideas que dejan huella.
+             Soy Julián, desarrollador full stack en formación. Me encanta crear, colaborar y dar vida a proyectos que se sienten modernos y únicos.
             </p>
           </div>
 
@@ -33,33 +34,32 @@ export default function Home() {
               className="relative z-10 w-[180px] sm:w-[230px] md:w-[270px] lg:w-[300px] xl:w-[300px] h-auto"
             />
           </div>
-
         </div>
-      </section>
 
+      </section>
       {/* Seccion de carrusel */}
       <div className="bg-black clr-g uppercase font-champion">
-        <MarqueeText baseVelocity={-0.7}>
+        <MarqueeText baseVelocity={-1}>
           Fullstack • React • Laravel • Tailwind •
         </MarqueeText>
-        <MarqueeText baseVelocity={0.7}>
+        <MarqueeText baseVelocity={1}>
           portfolio presentation • Junior Developer • Colombia •
         </MarqueeText>
       </div>
 
+      <div className="text-center">
+        <h2 className="uppercase font-champion mt-20 mb-10 text-[28px] sm:text-[36px] md:text-[48px] xl:text-[55px] ">
+          ¿En qué puedo ayudarte?
+        </h2>
+      </div>
 
-      
-        <div className="text-center">
-          <h2 className="uppercase font-champion mt-20 mb-10 text-[28px] sm:text-[36px] md:text-[48px] xl:text-[55px] ">
-            ¿En qué puedo ayudarte?
-          </h2>
+      <ListSkills />
 
-        </div>
-
-        <ListSkills />
-
-
-
+      {/* Paginacion */}
+         <ButtonPages
+        left={{ to: "/contact", label: "contact" }}
+        right={{ to: "/projects/", label: "work" }}
+      />
 
     </>
   );
