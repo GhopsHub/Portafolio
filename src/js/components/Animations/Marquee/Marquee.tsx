@@ -10,7 +10,7 @@ import {
   useMotionValue,
 } from 'framer-motion';
 import { wrap } from '@motionone/utils';
-import { cn } from '@/lib/utils';
+import { cn } from '../../../../lib/utils';
 
 interface MarqueeProps {
   children: string;
@@ -76,7 +76,11 @@ const MarqueeText = forwardRef<HTMLDivElement, MarqueeProps>(({
         style={{ x }}
       >
         {[...Array(4)].map((_, i) => (
-          <span key={i} className={cn('block text-[8vw]', clasname)}>
+          <span key={i} className={cn(
+            'block text-[50px] sm:text-[60px] md:text-[80px] lg:text-[100px] xl:text-[100px]',
+            clasname
+          )}>
+
             {children}
           </span>
         ))}

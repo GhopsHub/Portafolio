@@ -1,11 +1,11 @@
 import charactercontact from "../../assets/images/Characters/charactercontact.png"
-import { ButtonPages } from "@/components/UI/buttonPages"
+import { ButtonPages } from "@/js/components/UI/buttonPages"
 
 export default function Contact() {
   return (
     <div>
       <section className="min-h-[calc(100vh-52px)] flex items-center justify-center px-4 overflow-hidden">
-        <div className="flex flex-col-reverse md:flex-row items-center justify-between w-full max-w-7xl gap-10">
+        <div className="flex flex-col-reverse md:flex-row items-center justify-between w-full max-w-7xl gap-10 p-10">
 
           {/* Texto descriptivo */}
           <div className="w-full md:w-1/2 text-center md:text-left">
@@ -19,7 +19,8 @@ export default function Contact() {
             {/* Imagen encima */}
             <img
               src={charactercontact}
-              alt="Mi foto"
+              alt="contact"
+              decoding="async"
               className="relative z-10 w-[180px] sm:w-[230px] md:w-[270px] lg:w-[300px] xl:w-[300px] h-auto"
             />
           </div>

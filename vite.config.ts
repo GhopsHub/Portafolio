@@ -6,9 +6,8 @@ export default defineConfig({
   base: '/Portafolio/',
   plugins: [react()],
   resolve: {
-  alias: {
-  '@': path.resolve(__dirname, 'src/js'),
-}
+    alias: {
+      '@': path.resolve(__dirname, 'src'),       
+    },
   },
 })
-

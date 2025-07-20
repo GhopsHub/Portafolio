@@ -45,7 +45,7 @@ export const ButtonPages = ({
   if (!to || !children) return null;
 
   return (
-    <Link to={to} className="flex items-center gap-2 group text-2xl">
+    <Link to={to} className="flex items-center gap-2 group text-2xl p-10">
       {direction === "left" && (
         <ArrowLeft className="text-primary group-hover:-translate-x-1 transition-transform duration-300" />
       )}

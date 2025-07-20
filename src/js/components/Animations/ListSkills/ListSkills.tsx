@@ -1,4 +1,4 @@
-import { cn } from "@/lib/utils";
+import { cn } from "../../../../lib/utils";
 import {
 	Database,
 	Hammer,
@@ -48,7 +48,7 @@ export function ListSkills() {
 		},
 	];
 	return (
-		<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-10 justify-items-center mb-20 mt-32">
+		<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 justify-items-center mb-15">
 
 			{features.map((feature, index) => (
 				<Feature key={feature.title} {...feature} index={index} />

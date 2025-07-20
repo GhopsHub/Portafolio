@@ -7,8 +7,8 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="relative py-2 shadow-md z-50 bg-dark my-3">
-      <div className="flex items-center justify-between px-2 sm:px-4">
+    <nav className="relative py-2 px-3 shadow-md z-50 bg-dark my-3">
+      <div className="flex items-center justify-between px-2 pr-4 sm:px-4">
 
         {/* Logo */}
         <Link to="/">
