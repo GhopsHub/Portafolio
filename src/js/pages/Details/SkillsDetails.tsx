@@ -1,6 +1,6 @@
 // src/js/pages/skills/SkillDetail.tsx
 import { useParams } from "react-router-dom"
-import { skillsData } from "../../../data/SkillsData"
+import { skillsData } from "../../../data/skillsData"
 import type { LucideIcon } from "lucide-react"
 
 export default function SkillDetail() {

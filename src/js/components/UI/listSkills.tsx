@@ -15,7 +15,7 @@ export function ListSkills() {
 
 const Feature = ({
   title,
-  description,
+  shortDescription,
   icon: Icon,
   index,
   slug,
@@ -47,7 +47,7 @@ const Feature = ({
           </span>
         </div>
         <p className="text-sm text-neutral-600 dark:text-neutral-300 max-w-xs relative z-10 px-10">
-          {description}
+          {shortDescription}
         </p>
       </div>
     </Link>
