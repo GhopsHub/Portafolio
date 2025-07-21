@@ -5,7 +5,7 @@ import PortadaStamPurr from "../assets/images/Projects/StamPurr/FrontPage/port-s
 export type WorkItem = {
   name: string
   type: string
-  tecnologies: string
+  technologies: string
   year: string
   slug: string
   cover?: string
@@ -20,7 +20,7 @@ export const workData: WorkItem[] = [
   {
     name: 'GhopStore',
     type: 'Web',
-    tecnologies: 'Bagisto',
+    technologies: 'Bagisto',
     year: '2024',
     slug: 'ghopstore',
     cover: PortadaGhopStore,
@@ -36,7 +36,7 @@ export const workData: WorkItem[] = [
   {
     name: 'SakuraRent',
     type: 'Web/Movil',
-    tecnologies: 'Laravel ~ React',
+    technologies: 'Laravel ~ React',
     year: '2025',
     slug: 'sakurarent',
     cover: PortadaSakuraRent,
@@ -50,7 +50,7 @@ export const workData: WorkItem[] = [
   {
     name: 'StamPurr',
     type: 'Web',
-    tecnologies: 'React ~ TypeScript',
+    technologies: 'React ~ TypeScript',
     year: '2025',
     slug: 'stampurr',
     cover: PortadaStamPurr,

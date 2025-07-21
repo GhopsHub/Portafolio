@@ -1,4 +1,17 @@
 {
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    },
+    "types": [
+      "node"
+    ],
+    "strict": true,
+    "forceConsistentCasingInFileNames": true
+  },
   "files": [],
   "references": [
     {
@@ -7,18 +20,5 @@
     {
       "path": "./tsconfig.node.json"
     }
-  ],
-  "compilerOptions": {
-    "baseUrl": "./src/js",
-    "paths": {
-      "@/*": [
-        "*"
-      ]
-    },
-    "types": [
-      "node"
-    ],
-    "strict": true,
-    "forceConsistentCasingInFileNames": true
-  }
+  ]
 }

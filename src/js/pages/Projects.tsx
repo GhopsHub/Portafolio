@@ -1,8 +1,7 @@
 import characterprojects from "../../assets/images/Characters/characterprojects.png"
-import { ButtonPages } from "@/js/components/UI/buttonPages";
-import { ListProyects } from "@/js/components/UI/listProjects";
+import { ButtonPages } from "../components/UI/buttonPages";
+import { ListProjects } from "../components/UI/listProjects";
 import { workData } from "../../data/workData";
-
 
 
 export default function Projects() {
@@ -28,7 +27,7 @@ export default function Projects() {
               src={characterprojects}
               alt="projects"
               className="relative z-10 w-[180px] sm:w-[230px] md:w-[270px] lg:w-[300px] xl:w-[300px] h-auto"
-              decoding="async"
+              fetchPriority="high"
             />
           </div>
         </div>
@@ -42,7 +41,7 @@ export default function Projects() {
 
       {/* Tabla con proyectos */}
       <section className="p-10 max-w-7xl mx-auto ">
-        <ListProyects data={workData} />
+        <ListProjects data={workData} />
       </section>
 
 

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 type WorkItem = {
   name: string
   type: string
-  tecnologies: string
+  technologies: string
   year: string
   slug: string
 }
@@ -12,7 +12,7 @@ type Props = {
   data: WorkItem[]
 }
 
-export const ListProyects = ({ data }: Props) => {
+export const ListProjects = ({ data }: Props) => {
   return (
     <div className="w-full overflow-x-auto">
       <table className="hidden md:table w-full border-collapse">
@@ -38,7 +38,7 @@ export const ListProyects = ({ data }: Props) => {
               </td>
 
               <td className="py-5 px-4 ">{item.type}</td>
-              <td className="py-5 px-4 ">{item.tecnologies}</td>
+              <td className="py-5 px-4 ">{item.technologies}</td>
               <td className="py-5 px-4 ">{item.year}</td>
             </tr>
           ))}
@@ -59,7 +59,7 @@ export const ListProyects = ({ data }: Props) => {
               <span className="font-semibold">Type:</span> {item.type}
             </div>
             <div>
-              <span className="font-semibold">Technologies:</span> {item.tecnologies}
+              <span className="font-semibold">Technologies:</span> {item.technologies}
             </div>
             <div>
               <span className="font-semibold">Year:</span> {item.year}

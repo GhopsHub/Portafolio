@@ -1,5 +1,5 @@
 import charactercontact from "../../assets/images/Characters/charactercontact.png"
-import { ButtonPages } from "@/js/components/UI/buttonPages"
+import { ButtonPages } from "../components/UI/buttonPages"
 
 export default function Contact() {
   return (
@@ -22,6 +22,7 @@ export default function Contact() {
               alt="contact"
               decoding="async"
               className="relative z-10 w-[180px] sm:w-[230px] md:w-[270px] lg:w-[300px] xl:w-[300px] h-auto"
+            fetchPriority="high"
             />
           </div>
         </div>

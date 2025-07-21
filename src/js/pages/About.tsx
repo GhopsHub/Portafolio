@@ -1,5 +1,5 @@
 import characterabout from "../../assets/images/Characters/characterabout.png";
-import { ButtonPages } from "@/js/components/UI/buttonPages";
+import { ButtonPages } from "../components/UI/buttonPages";
 
 export default function About() {
 
@@ -20,6 +20,7 @@ export default function About() {
               alt="about"
               decoding="async"
               className="relative z-10 w-[180px] sm:w-[230px] md:w-[270px] lg:w-[300px] xl:w-[300px] h-auto"
+            fetchPriority="high"
             />
           </div>
         </div>

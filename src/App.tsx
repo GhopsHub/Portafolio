@@ -6,7 +6,8 @@ import Projects from "./js/pages/Projects"
 import About from "./js/pages/About"
 import Contact from "./js/pages/Contact"
 import ScrollToTop from "./js/components/functions/ScrollToTop"
-import ProjectDetail from "./js/pages/ProjectDetail"
+import ProjectDetail from "./js/pages/Details/ProjectDetail"
+import SkillDetail from "./js/pages/Details/SkillsDetails"
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/projects/" element={<Projects />} />
           <Route path="/projects/:slug" element={<ProjectDetail />} />
+         <Route path="/skill/:slug" element={<SkillDetail />} />
           <Route path="/about/" element={<About />} />
           <Route path="/contact/" element={<Contact />} />
         </Routes>
@@ -26,6 +28,5 @@ function App() {
     </BrowserRouter>
   );
 }
-
 
 export default App
