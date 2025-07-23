@@ -1,7 +1,7 @@
 import { cn } from "../../../lib/utils"
 import { skillsData } from "../../../data/skillsData"
 import type { SkillItem } from "../../../data/skillsData"
-import { Link } from "react-router-dom"
+// import { Link } from "react-router-dom"
 
 export function ListSkills() {
   return (
@@ -18,13 +18,14 @@ const Feature = ({
   shortDescription,
   icon: Icon,
   index,
-  slug,
+  // slug,
 }: SkillItem & { index: number }) => {
   return (
-    <Link to={`/skill/${slug}`} className="block">
+    // <Link to={`/skill/${slug}`} className="block">
+    <div className="block">
       <div
         className={cn(
-          "flex flex-col lg:border-r py-10 relative group/feature dark:border-neutral-800 cursor-pointer",
+          "flex flex-col lg:border-r py-10 relative group/feature dark:border-neutral-800 cursor-pointer w-[300px] h-[250px]",
           (index === 0 || index === 4) && "lg:border-l dark:border-neutral-800",
           index < 4 && "lg:border-b dark:border-neutral-800"
         )}
@@ -46,10 +47,11 @@ const Feature = ({
             {title}
           </span>
         </div>
-        <p className="text-sm text-neutral-600 dark:text-neutral-300 max-w-xs relative z-10 px-10">
+        <p className="text-sm text-neutral-600 dark:text-neutral-300 relative z-10 px-10">
           {shortDescription}
         </p>
       </div>
-    </Link>
+      {/* </Link> */}
+      </div>
   )
 }

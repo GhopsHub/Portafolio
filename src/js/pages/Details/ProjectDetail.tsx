@@ -52,49 +52,66 @@ export default function ProjectDetail() {
         </section>
 
         {/* Secciones */}
-        {project.sections
-          ?.filter(s => ['description', 'technologies', 'history'].includes(s.type))
-          .map((section, index) => (
-            <div key={index} className="px-4 md:px-10 lg:px-32 py-16 max-w-7xl mx-auto">
-              {section.title && (
-                <h2 className="text-2xl md:text-3xl font-bold mb-10 text-center">{section.title}</h2>
-              )}
-              {section.description && (
-                <p className="mb-6 text-justify max-w-3xl mx-auto leading-relaxed text-lg">
-                  {section.description}
-                </p>
-              )}
+{project.sections
+  ?.filter(s => ['description', 'technologies', 'history'].includes(s.type))
+  .map((section, index) => (
+    <div key={index} className="px-4 md:px-10 lg:px-32 py-16 max-w-7xl mx-auto">
+      {section.title && (
+        <h2 className="text-2xl md:text-3xl font-bold mb-10 text-center">
+          {section.title}
+        </h2>
+      )}
 
-              {Array.isArray(section.images) && section.images.length > 0 && (
-                <div
-                  className={`${section.type === 'technologies'
-                      ? 'flex justify-center gap-6 flex-wrap'
-                      : 'flex flex-col items-center gap-8'
-                    }`}
-                >
-                  {section.images.map((img, i) => (
-                    <div
-                      key={i}
-                      className={`${section.type === 'technologies' ? 'w-16 h-16' : 'w-full max-w-3xl'
-                        }`}
-                    >
-                      <img
-                        src={img}
-                        alt={`Imagen ${i + 1}`}
-                        className={`${section.type === 'technologies'
-                            ? 'w-full h-full object-contain'
-                            : 'w-full h-auto object-cover mt-[50px] sm:mt-[70px] md:mt-[70px] lg:mt-[40px] xl:mt-[100px]'
-                          }`}
-                        loading="lazy"
-                      />
-                    </div>
-                  ))}
-                </div>
-              )}
+      {section.description && (
+        <p className="mb-6 text-justify max-w-3xl mx-auto leading-relaxed text-lg">
+          {section.description}
+        </p>
+      )}
 
+      {section.url && (
+        <div className="text-center mb-6">
+          <a
+            href={section.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="uppercase text-white hover:text-blue-200 underline text-lg"
+          >
+            Ver sitio
+          </a>
+        </div>
+      )}
+
+      {Array.isArray(section.images) && section.images.length > 0 && (
+        <div
+          className={`${
+            section.type === 'technologies'
+              ? 'flex justify-center gap-6 flex-wrap'
+              : 'flex flex-col items-center gap-8'
+          }`}
+        >
+          {section.images.map((img, i) => (
+            <div
+              key={i}
+              className={`${
+                section.type === 'technologies' ? 'w-16 h-16' : 'w-full max-w-3xl'
+              }`}
+            >
+              <img
+                src={img}
+                alt={`Imagen ${i + 1}`}
+                className={`${
+                  section.type === 'technologies'
+                    ? 'w-full h-full object-contain'
+                    : 'w-full h-auto object-cover mt-[50px] sm:mt-[70px] md:mt-[70px] lg:mt-[40px] xl:mt-[100px]'
+                }`}
+                loading="lazy"
+              />
             </div>
           ))}
-
+        </div>
+      )}
+    </div>
+  ))}
 
       </section>
     </>
