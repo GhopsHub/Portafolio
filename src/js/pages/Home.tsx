@@ -8,15 +8,16 @@ export default function Home() {
     <>
       <section className="min-h-[calc(100vh-52px)] flex items-center justify-center px-4 overflow-hidden">
         <div className="flex flex-col-reverse md:flex-row items-center justify-between w-full max-w-7xl gap-10 p-10">
-
           {/* Texto descriptivo */}
           <div className="w-full md:w-1/2 text-center md:text-left">
             <h1 className="text-[28px] sm:text-[36px] md:text-[48px] xl:text-[55px] mb-6 uppercase font-champion leading-tight">
-              Tu idea, mi código.
+              Tu idea, mi códigooo.
             </h1>
 
             <p className="font-sans text-base sm:text-lg md:text-xl max-w-md mx-auto md:mx-0">
-              Soy Julián, desarrollador full stack en formación. Me encanta crear, colaborar y dar vida a proyectos que se sienten modernos y únicos.
+              Soy Julián, desarrollador full stack en formación. Me encanta
+              crear, colaborar y dar vida a proyectos que se sienten modernos y
+              únicos.
             </p>
           </div>
 
@@ -48,7 +49,6 @@ export default function Home() {
         </MarqueeText>
       </div>
 
-
       <div className="text-center">
         <h2 className="uppercase font-champion mt-20 mb-10 text-[28px] sm:text-[36px] md:text-[48px] xl:text-[55px] ">
           ¿En qué puedo ayudarte?
@@ -59,13 +59,11 @@ export default function Home() {
 
       {/* Paginacion */}
       <div className="mt-16">
-
         <ButtonPages
           left={{ to: "/contact", label: "contact" }}
           right={{ to: "/projects/", label: "work" }}
         />
       </div>
-
     </>
   );
 }
