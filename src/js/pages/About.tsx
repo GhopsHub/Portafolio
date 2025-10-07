@@ -1,8 +1,7 @@
-import characterabout from "../../assets/images/Characters/characterabout.png";
+import characterabout from "../../assets/images/Characters/characterabout.webp";
 import { ButtonPages } from "../components/UI/buttonPages";
 
 export default function About() {
-
   return (
     <div>
       {/* Sección principal */}
@@ -26,18 +25,25 @@ export default function About() {
       </section>
 
       {/* Sección secundaria */}
-   <section className="flex justify-center">
-  <div className="max-w-2xl p-6 rounded-md shadow-md mb-16">
-    <p className="font-sans text-base sm:text-lg md:text-xl leading-relaxed text-center">
-      Soy <strong>Julián</strong>, tecnólogo en análisis y desarrollo de software. Tengo 6 meses certificados y otros 6 no certificados en los que he creado varios sistemas, aplicando buenas prácticas para mejorar mis habilidades fullstack.
-      <br /><br />
-      Siempre estoy en constante aprendizaje, explorando nuevas tecnologías y herramientas. Me apasiona el desarrollo web y disfruto creando aplicaciones funcionales y atractivas.
-      <br /><br />
-      Si buscas a alguien que aprende rápido y construye proyectos reales, <strong>¡aquí estoy!</strong>
-    </p>
-  </div>
-</section>
-
+      <section className="flex justify-center">
+        <div className="max-w-2xl p-6 rounded-md shadow-md mb-16">
+          <p className="font-sans text-base sm:text-lg md:text-xl leading-relaxed text-center">
+            Soy <strong>Julián</strong>, tecnólogo en análisis y desarrollo de
+            software. Tengo 6 meses certificados y otros 6 no certificados en
+            los que he creado varios sistemas, aplicando buenas prácticas para
+            mejorar mis habilidades fullstack.
+            <br />
+            <br />
+            Siempre estoy en constante aprendizaje, explorando nuevas
+            tecnologías y herramientas. Me apasiona el desarrollo web y disfruto
+            creando aplicaciones funcionales y atractivas.
+            <br />
+            <br />
+            Si buscas a alguien que aprende rápido y construye proyectos reales,{" "}
+            <strong>¡aquí estoy!</strong>
+          </p>
+        </div>
+      </section>
 
       {/* Paginación */}
       <ButtonPages

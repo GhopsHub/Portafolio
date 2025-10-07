@@ -1,4 +1,4 @@
-import charactermain from "../../assets/images/Characters/charactermain.png";
+import charactermain from "../../assets/images/Characters/charactermain.webp";
 import MarqueeText from "../components/Animations/Marquee/Marquee";
 import { ListSkills } from "../components/UI/listSkills";
 import { ButtonPages } from "../components/UI/buttonPages";

@@ -1,11 +1,8 @@
-import charactercontact from "../../assets/images/Characters/charactercontact.png";
+import charactercontact from "../../assets/images/Characters/charactercontact.webp";
 import { ButtonPages } from "../components/UI/buttonPages";
 import { UnderLine } from "../components/Animations/UnderLine/underLine";
 
-import {
-  Mail,
-  MapPin,
-} from "lucide-react";
+import { Mail, MapPin } from "lucide-react";
 
 export default function Contact() {
   return (
@@ -35,7 +32,9 @@ export default function Contact() {
         <div className="flex flex-col gap-8 w-full max-w-2xl text-white">
           {/* Info de contacto */}
           <div className="p-6 rounded-md shadow-md">
-            <h2 className="text-2xl font-champion mb-4 border-b border-white pb-2">Contact</h2>
+            <h2 className="text-2xl font-champion mb-4 border-b border-white pb-2">
+              Contact
+            </h2>
             <p className="flex items-center gap-2">
               <Mail className="w-5 h-5" />
               julianbecerra432@gmail.com
@@ -44,7 +43,9 @@ export default function Contact() {
 
           {/* Ubicación */}
           <div className="p-6 rounded-md shadow-md">
-            <h2 className="text-2xl font-champion mb-4 border-b border-white pb-2">Location</h2>
+            <h2 className="text-2xl font-champion mb-4 border-b border-white pb-2">
+              Location
+            </h2>
             <p className="flex items-center gap-2">
               <MapPin className="w-5 h-5" />
               Chía, Cundinamarca
@@ -53,7 +54,9 @@ export default function Contact() {
 
           {/* Redes */}
           <div className="p-6 rounded-md shadow-md">
-            <h2 className="text-2xl font-champion mb-4 border-b border-white pb-2">Socials</h2>
+            <h2 className="text-2xl font-champion mb-4 border-b border-white pb-2">
+              Socials
+            </h2>
             <ul className="flex gap-6 mt-2 text-white text-base">
               <li>
                 <UnderLine>

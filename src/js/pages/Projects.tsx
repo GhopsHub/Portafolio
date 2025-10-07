@@ -1,22 +1,22 @@
-import characterprojects from "../../assets/images/Characters/characterprojects.png"
+import characterprojects from "../../assets/images/Characters/characterprojects.webp";
 import { ButtonPages } from "../components/UI/buttonPages";
 import { ListProjects } from "../components/UI/listProjects";
 import { workData } from "../../data/workData";
-
 
 export default function Projects() {
   return (
     <div>
       <section className="min-h-[calc(100vh-52px)] flex items-center justify-center px-4 overflow-hidden">
         <div className="flex flex-col-reverse md:flex-row items-center justify-between w-full max-w-7xl gap-10 p-10">
-
           {/* Texto descriptivo */}
           <div className="w-full md:w-1/2 text-center md:text-left">
             <h1 className="text-[28px] sm:text-[36px] md:text-[48px] xl:text-[55px] mb-6 uppercase font-champion leading-tight">
               Código con resultado.
             </h1>
             <p className="font-sans text-base sm:text-lg md:text-xl max-w-md mx-auto md:mx-0">
-              Proyectos desarrollados como parte de mi proceso de aprendizaje en Laravel, React, Vue.js y TailwindCSS. En cada uno aplico lo que voy aprendiendo sobre desarrollo web full stack y buenas prácticas
+              Proyectos desarrollados como parte de mi proceso de aprendizaje en
+              Laravel, React, Vue.js y TailwindCSS. En cada uno aplico lo que
+              voy aprendiendo sobre desarrollo web full stack y buenas prácticas
             </p>
           </div>
 
@@ -44,13 +44,11 @@ export default function Projects() {
         <ListProjects data={workData} />
       </section>
 
-
       {/* Paginacion */}
       <ButtonPages
         left={{ to: "/", label: "home" }}
         right={{ to: "/about/", label: "about" }}
       />
-
     </div>
-  )
+  );
 }
