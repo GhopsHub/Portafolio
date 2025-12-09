@@ -14,9 +14,8 @@ export default function Projects() {
               Código con resultado.
             </h1>
             <p className="font-sans text-base sm:text-lg md:text-xl max-w-md mx-auto md:mx-0">
-              Proyectos desarrollados como parte de mi proceso de aprendizaje en
-              Laravel, React, Vue.js y TailwindCSS. En cada uno aplico lo que
-              voy aprendiendo sobre desarrollo web full stack y buenas prácticas
+              Aqui algunos de mis proyectos destacados, donde cada línea de
+              código refleja mi pasión por el desarrollo y la innovación.
             </p>
           </div>
 
@@ -35,7 +34,7 @@ export default function Projects() {
 
       <div className="text-center">
         <h2 className="uppercase font-champion mt-20 mb-10 text-[28px] sm:text-[36px] md:text-[48px] xl:text-[55px] ">
-          Mis proyectos hasta ahora
+          Mis proyectos
         </h2>
       </div>
 

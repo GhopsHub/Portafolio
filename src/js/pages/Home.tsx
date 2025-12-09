@@ -1,45 +1,68 @@
 import charactermain from "../../assets/images/Characters/charactermain.webp";
+
+// Technologies
+import premiere from "../../assets/images/Technologies/premiere.svg";
+import after from "../../assets/images/Technologies/after-effects.svg";
+import canva from "../../assets/images/Technologies/canva.svg";
+import css from "../../assets/images/Technologies/css.svg";
+import discord from "../../assets/images/Technologies/discord.svg";
+import docker from "../../assets/images/Technologies/docker.svg";
+import figma from "../../assets/images/Technologies/figma.svg";
+import instagram from "../../assets/images/Technologies/instagram_dark.svg";
+import laravel from "../../assets/images/Technologies/laravel.svg";
+import mysql from "../../assets/images/Technologies/mysql.svg";
+import nodejs from "../../assets/images/Technologies/nodejs.svg";
+import openai from "../../assets/images/Technologies/openai_wordmark_dark.svg";
+import photoshop from "../../assets/images/Technologies/photoshop.svg";
+import php from "../../assets/images/Technologies/php_dark.svg";
+import prettier from "../../assets/images/Technologies/prettier-icon-dark.svg";
+import react from "../../assets/images/Technologies/react_wordmark_dark.svg";
+import tailwindcss from "../../assets/images/Technologies/tailwindcss-wordmark-dark.svg";
+import threejs from "../../assets/images/Technologies/threejs-dark.svg";
+import tiktok from "../../assets/images/Technologies/tiktok.svg";
+import typescript from "../../assets/images/Technologies/typescript.svg";
+import ubuntu from "../../assets/images/Technologies/ubuntu.svg";
+import vscode from "../../assets/images/Technologies/vscode.svg";
+import vue from "../../assets/images/Technologies/vue.svg";
+import windows from "../../assets/images/Technologies/windows.svg";
+import wordpress from "../../assets/images/Technologies/wordpress.svg";
+import zoom from "../../assets/images/Technologies/zoom.svg";
+
 import MarqueeText from "../components/Animations/Marquee/Marquee";
-import { ListSkills } from "../components/UI/listSkills";
 import { ButtonPages } from "../components/UI/buttonPages";
+import { Skills } from "../components/UI/skills";
 
 export default function Home() {
   return (
     <>
+      {/* Hero */}
       <section className="min-h-[calc(100vh-52px)] flex items-center justify-center px-4 overflow-hidden">
         <div className="flex flex-col-reverse md:flex-row items-center justify-between w-full max-w-7xl gap-10 p-10">
-          {/* Texto descriptivo */}
           <div className="w-full md:w-1/2 text-center md:text-left">
             <h1 className="text-[28px] sm:text-[36px] md:text-[48px] xl:text-[55px] mb-6 uppercase font-champion leading-tight">
-              Tu idea, mi códigooo.
+              Tu idea, mi código.
             </h1>
-
             <p className="font-sans text-base sm:text-lg md:text-xl max-w-md mx-auto md:mx-0">
               Soy Julián, desarrollador full stack en formación. Me encanta
-              crear, colaborar y dar vida a proyectos que se sienten modernos y
-              únicos.
+              crear, colaborar y dar vida a proyectos modernos.
             </p>
           </div>
 
-          {/* Imagen sobre texto GHOPS */}
           <div className="relative w-full md:w-1/2 flex items-center justify-center h-[300px] sm:h-[350px] md:h-[400px]">
-            {/* Texto GHOPS detrás */}
             <span className="absolute inset-0 flex items-center justify-center font-champion uppercase text-[130px] sm:text-[200px] md:text-[150px] lg:text-[240px] clr-g z-0 select-none pointer-events-none animate__animated animate__rubberBand">
               ghops
             </span>
-
-            {/* Imagen encima */}
             <img
               src={charactermain}
               alt="home"
-              className="relative z-10 w-[180px] sm:w-[230px] md:w-[270px] lg:w-[300px] xl:w-[300px] h-auto"
+              className="relative z-10 w-[180px] sm:w-[230px] md:w-[270px] lg:w-[300px]"
               fetchPriority="high"
             />
           </div>
         </div>
       </section>
 
-      {/* Seccion de carrusel */}
+      {/* Carrusel */}
       <div className="bg-black clr-g uppercase font-champion w-full">
         <MarqueeText baseVelocity={-1}>
           • Fullstack • React • Laravel • Tailwind •
@@ -49,15 +72,67 @@ export default function Home() {
         </MarqueeText>
       </div>
 
+      {/* Skills */}
       <div className="text-center">
-        <h2 className="uppercase font-champion mt-20 mb-10 text-[28px] sm:text-[36px] md:text-[48px] xl:text-[55px] ">
-          ¿En qué puedo ayudarte?
+        <h2 className="uppercase font-champion mt-20 mb-10 text-[28px] sm:text-[36px] md:text-[48px] xl:text-[55px]">
+          Conocimientos y Herramientas
         </h2>
       </div>
 
-      <ListSkills />
+      <Skills
+        items={[
+          {
+            images: [
+              php,
+              laravel,
+              vue,
+              react,
+              tailwindcss,
+              css,
+              typescript,
+              mysql,
+              prettier,
+            ],
+            title: "Herramientas principales",
+            subtitle: "Herramientas de conocimiento principal",
+          },
+          {
+            images: [nodejs, threejs, docker, ubuntu],
+            title: "Conocimisientos adicionales basicos",
+            subtitle: "Conocimientos adicionales en otras tecnologias.",
+          },
+          {
+            images: [canva, wordpress, figma],
+            title: "Manejo de herramientas de maquetado",
+            subtitle: "Conocimiento en herramientas de maquetado y diseño.",
+          },
+          {
+            images: [windows, vscode, discord, zoom],
+            title: "Entorno de trabajo",
+            subtitle: "Conocimiento en entornos de trabajo colaborativos.",
+          },
+          {
+            images: [openai],
+            title: "Entorno de trabajo eficiente",
+            subtitle: "aplicacion de IA para mejorar la productividad.",
+          },
 
-      {/* Paginacion */}
+          {
+            images: [premiere, after, photoshop],
+            title: "Herramientas de Edición",
+            subtitle:
+              "Manejo basico de herramientas de edicion de video y fotos para contenido digital.",
+          },
+
+          {
+            images: [tiktok, instagram],
+            title: "Manejo de redes sociales",
+            subtitle: "Conocimeitno en el manejo de redes sociales.",
+          },
+        ]}
+      />
+
+      {/* Paginación */}
       <div className="mt-16">
         <ButtonPages
           left={{ to: "/contact", label: "contact" }}

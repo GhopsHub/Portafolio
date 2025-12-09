@@ -1,7 +1,31 @@
 import characterabout from "../../assets/images/Characters/characterabout.webp";
 import { ButtonPages } from "../components/UI/buttonPages";
+import { Timeline } from "../components/UI/timeLine";
 
 export default function About() {
+  const events = [
+    {
+      title: "2025",
+      description:
+        "Lancé mi primer proyecto profesional con Next.js y Tailwind.",
+      image: characterabout,
+      content: "Lancé mi primer proyecto profesional con Next.js y Tailwind.",
+    },
+    {
+      title: "2024",
+      description:
+        "Aprendí Laravel, React y optimización de UI con animaciones suaves.",
+      image: "https://via.placeholder.com/400x250",
+      content:
+        "Aprendí Laravel, React y optimización de UI con animaciones suaves.",
+    },
+    {
+      title: "2023",
+      description: "Comencé mi viaje en desarrollo web full stack.",
+      image: "https://via.placeholder.com/400x250",
+      content: "Comencé mi viaje en desarrollo web full stack.",
+    },
+  ];
   return (
     <div>
       {/* Sección principal */}
@@ -25,7 +49,7 @@ export default function About() {
       </section>
 
       {/* Sección secundaria */}
-      <section className="flex justify-center">
+      {/* <section className="flex justify-center">
         <div className="max-w-2xl p-6 rounded-md shadow-md mb-16">
           <p className="font-sans text-base sm:text-lg md:text-xl leading-relaxed text-center">
             Soy <strong>Julián</strong>, tecnólogo en análisis y desarrollo de
@@ -43,7 +67,10 @@ export default function About() {
             <strong>¡aquí estoy!</strong>
           </p>
         </div>
-      </section>
+      </section> */}
+
+      {/* Línea de tiempo */}
+      <Timeline data={events} />
 
       {/* Paginación */}
       <ButtonPages
