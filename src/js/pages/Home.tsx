@@ -28,6 +28,9 @@ import windows from "../../assets/images/Technologies/windows.svg";
 import wordpress from "../../assets/images/Technologies/wordpress.svg";
 import zoom from "../../assets/images/Technologies/zoom.svg";
 
+import claude from "../../assets/images/Technologies/claude-ai-wordmark-icon_dark.svg";
+import jwt from "../../assets/images/Technologies/jwt.svg";
+
 import MarqueeText from "../components/Animations/Marquee/Marquee";
 import { ButtonPages } from "../components/UI/buttonPages";
 import { Skills } from "../components/UI/skills";
@@ -92,42 +95,47 @@ export default function Home() {
               typescript,
               mysql,
               prettier,
+              jwt,
             ],
-            title: "Herramientas principales",
-            subtitle: "Herramientas de conocimiento principal",
+            title: "Stack principal",
+            subtitle:
+              "Conjunto de tecnologías que conforman mi base principal de desarrollo.",
           },
           {
             images: [nodejs, threejs, docker, ubuntu],
-            title: "Conocimisientos adicionales basicos",
-            subtitle: "Conocimientos adicionales en otras tecnologias.",
+            title: "Exploración tecnológica",
+            subtitle:
+              "Herramientas que he utilizado en pruebas, prototipos y ejercicios asistidos por IA.",
           },
           {
             images: [canva, wordpress, figma],
-            title: "Manejo de herramientas de maquetado",
-            subtitle: "Conocimiento en herramientas de maquetado y diseño.",
+            title: "Herramientas de diseño y maquetación",
+            subtitle:
+              "Experiencia en el uso de herramientas para estructurar y visualizar ideas de manera alineada al proyecto final.",
           },
           {
             images: [windows, vscode, discord, zoom],
             title: "Entorno de trabajo",
-            subtitle: "Conocimiento en entornos de trabajo colaborativos.",
+            subtitle:
+              "Ecosistema de herramientas que uso para colaborar, desarrollar y organizar proyectos.",
           },
           {
-            images: [openai],
-            title: "Entorno de trabajo eficiente",
-            subtitle: "aplicacion de IA para mejorar la productividad.",
+            images: [openai, claude],
+            title: "Asistencia con IA",
+            subtitle:
+              "Uso de inteligencia artificial para optimizar procesos y mejorar la productividad en mis proyectos.",
           },
-
           {
             images: [premiere, after, photoshop],
-            title: "Herramientas de Edición",
+            title: "Herramientas de edición digital",
             subtitle:
-              "Manejo basico de herramientas de edicion de video y fotos para contenido digital.",
+              "Conocimientos básicos en edición de video e imágenes para contenido digital.",
           },
-
           {
             images: [tiktok, instagram],
-            title: "Manejo de redes sociales",
-            subtitle: "Conocimeitno en el manejo de redes sociales.",
+            title: "Gestión de contenido para redes sociales",
+            subtitle:
+              "Experiencia creando y publicando contenido que genera interacción y crecimiento orgánico.",
           },
         ]}
       />

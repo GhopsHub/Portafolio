@@ -35,6 +35,9 @@ export default function About() {
             <h1 className="text-[28px] sm:text-[36px] md:text-[48px] xl:text-[55px] mb-6 uppercase font-champion leading-tight">
               Quien soy...?
             </h1>
+            <p className="font-sans text-base sm:text-lg md:text-xl max-w-md mx-auto md:mx-0">
+              emm ...
+            </p>
           </div>
           <div className="relative w-full md:w-1/2 flex items-center justify-center h-[300px] sm:h-[350px] md:h-[400px]">
             <img

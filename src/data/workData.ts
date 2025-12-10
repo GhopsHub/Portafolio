@@ -1,30 +1,23 @@
 // PORTADAS
-// import PortadaGhopStore from "../assets/images/Projects/GhopStore/FrontPage/port-ghopstore.jpg"
-// import PortadaSakuraRent from "../assets/images/Projects/SakuraRent/FrontPage/port-sakurarent.jpg"
-// import PortadaStamPurr from "../assets/images/Projects/StamPurr/FrontPage/port-stampurr.webp"
-
-// IMAGENES GHOPSTORE
-// import ghopstore1 from "../assets/images/Projects/GhopStore/System/system.png"
-// import ghopstore2 from "../assets/images/Technologies/laravel.svg"
-// import ghopstore3 from "../assets/images/Technologies/github_dark.svg"
-// import ghopstore4 from "../assets/images/Technologies/mysql.svg"
-// import ghopstore5 from "../assets/images/Projects/GhopStore/History/add (4).jpg"
+import PortadaSakuraRent from "../assets/images/Projects/SakuraRent/portada/sakura4.png";
+import PortadaStamPurr from "../assets/images/Projects/StamPurr/portada/stampurr.webp";
 
 // IMAGENES SAKURARENT
-// import sakurarent1 from "../assets/images/Projects/SakuraRent/System/system.png"
-// import sakurarent2 from "../assets/images/Technologies/github_dark.svg"
-// import sakurarent3 from "../assets/images/Technologies/laravel.svg"
-// import sakurarent4 from "../assets/images/Technologies/mysql.svg"
-// import sakurarent5 from "../assets/images/Technologies/postman.svg"
-// import sakurarent6 from "../assets/images/Technologies/react_wordmark_dark.svg"
-// import sakurarent7 from "../assets/images/Technologies/threejs-dark.svg"
-// import sakurarent8 from "../assets/images/Technologies/typescript.svg"
+import sakurarent from "../assets/images/Projects/SakuraRent/sakura.png";
+import sakurarent1 from "../assets/images/Projects/SakuraRent/sakura1.png";
+import sakurarent2 from "../assets/images/Projects/SakuraRent/sakura2.png";
+import sakurarent3 from "../assets/images/Projects/SakuraRent/sakura3.png";
 
 // IMAGENES STAMPURR
-// import stampurr from "../assets/images/Projects/StamPurr/History/stampurr (1).jpg"
-// import stampurr2 from "../assets/images/Technologies/react_wordmark_dark.svg"
-// import stampurr3 from "../assets/images/Technologies/github_dark.svg"
-// import stampurr4 from "../assets/images/Technologies/typescript.svg"
+import stampurr from "../assets/images/Projects/StamPurr/stampurr1.webp";
+
+// TECHNOLOGIES
+import css from "../assets/images/Technologies/css.svg";
+import laravel from "../assets/images/Technologies/laravel.svg";
+import mysql from "../assets/images/Technologies/mysql.svg";
+import react from "../assets/images/Technologies/react_wordmark_dark.svg";
+import tailwind from "../assets/images/Technologies/tailwindcss-wordmark-dark.svg";
+import typescript from "../assets/images/Technologies/typescript.svg";
 
 export type WorkItem = {
   name: string;
@@ -43,67 +36,27 @@ export type WorkItem = {
 };
 
 export const workData: WorkItem[] = [
-  //? GHOPSTORE
-  {
-    name: "GhopStore",
-    type: "Web",
-    technologies: "Bagisto",
-    year: "2024",
-    slug: "ghopstore",
-    // cover: PortadaGhopStore,
-    sections: [
-      {
-        type: "description",
-        title: "¿Qué es GhopStore?",
-        description:
-          "GhopStore es una tienda en línea desarrollada a partir del código abierto de Bagisto. Se personalizó por completo la interfaz para alinearla con la identidad de la marca, modificando tanto el diseño como la experiencia de usuario. Se integraron funcionalidades como el inicio de sesión con Google, la configuración de moneda e idioma personalizados, y se adaptó el catálogo para incluir productos exclusivos de la marca. Además, se optimizó el panel administrativo, se ajustaron reglas de impuestos y envíos, y se mejoró la gestión de inventario para un control más eficiente.",
-        // images: [ghopstore1],
-      },
-      {
-        type: "technologies",
-        title: "Tecnologías",
-        description: "",
-        // images: [ghopstore2, ghopstore3, ghopstore4],
-      },
-      {
-        type: "history",
-        title: "¿De dónde nació GhopStore?",
-        description:
-          "GhopStore nació en 2024 como una solución pensada para pequeñas tiendas que buscaban digitalizar sus procesos de venta y llegar a más clientes. Surgió al identificar la falta de herramientas simples, accesibles y efectivas para emprendedores locales. Desde entonces, el proyecto ha evolucionado, ofreciendo una plataforma intuitiva que permite gestionar productos, pedidos y clientes sin complicaciones técnicas.",
-        // images: [ghopstore5],
-      },
-    ],
-  },
-
   //? SAKURARENT
   {
     name: "SakuraRent",
-    type: "Web/Móvil",
+    type: "Web",
     technologies: "Laravel ~ React",
     year: "2025",
     slug: "sakurarent",
-    // cover: PortadaSakuraRent,
+    cover: PortadaSakuraRent,
     sections: [
       {
         type: "description",
         title: "¿Qué es SakuraRent?",
         description:
           "Plataforma digital para alquilar vehículos de forma rápida, segura y eficiente. Disponible en versión web y móvil, conecta a propietarios y usuarios en una experiencia fluida centrada en la sostenibilidad y la movilidad inteligente.",
-        // images: [sakurarent1],
+        images: [sakurarent, sakurarent1, sakurarent2, sakurarent3],
       },
       {
         type: "technologies",
         title: "Tecnologías",
         description: "",
-        images: [
-          // sakurarent2,
-          // sakurarent3,
-          // sakurarent4,
-          // sakurarent5,
-          // sakurarent6,
-          // sakurarent7,
-          // sakurarent8,
-        ],
+        images: [css, laravel, mysql, tailwind, typescript],
       },
       {
         type: "history",
@@ -122,7 +75,7 @@ export const workData: WorkItem[] = [
     technologies: "React ~ TypeScript",
     year: "2025",
     slug: "stampurr",
-    // cover: PortadaStamPurr,
+    cover: PortadaStamPurr,
     sections: [
       {
         type: "description",
@@ -136,14 +89,14 @@ export const workData: WorkItem[] = [
         type: "technologies",
         title: "Tecnologías",
         description: "",
-        // images: [stampurr2, stampurr3, stampurr4],
+        images: [react, tailwind],
       },
       {
         type: "history",
         title: "De dónde nació StamPurr",
         description:
           "StamPurr es una pagina que buca crear productos personalizados, como tazas, camisetas, etc. Se desarrolló en 2025 con el objetivo de crear una marca que refleje la pasion por el arte y la personalización. Con un enfoque en la calidad y la atención al detalle, StamPurr busca ofrecer a sus clientes productos únicos que cuenten una historia.",
-        // images: [stampurr],
+        images: [stampurr],
       },
     ],
   },

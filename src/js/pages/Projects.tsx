@@ -14,8 +14,9 @@ export default function Projects() {
               Código con resultado.
             </h1>
             <p className="font-sans text-base sm:text-lg md:text-xl max-w-md mx-auto md:mx-0">
-              Aqui algunos de mis proyectos destacados, donde cada línea de
-              código refleja mi pasión por el desarrollo y la innovación.
+              Aqui entontraras una recopilación de mis proyectos en los que
+              implemento diversas tecnologías y herramientas para crear
+              soluciones innovadoras y funcionales.
             </p>
           </div>
 
