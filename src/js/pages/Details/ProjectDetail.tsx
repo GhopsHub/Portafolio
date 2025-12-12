@@ -1,118 +1,108 @@
-import { useState } from 'react';
-import { useParams } from 'react-router-dom';
-import { workData } from '../../../data/workData';
-import ClipDefs from '../../components/Animations/ImageMask/ImageMask';
+import { useState } from "react";
+import { useParams } from "react-router-dom";
+import { workData } from "../../../data/workData";
 
 export default function ProjectDetail() {
   const { slug } = useParams();
-  const project = workData.find(p => p.slug === slug);
+  const project = workData.find((p) => p.slug === slug);
 
-  // Estado para la imagen ampliada
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   if (!project) return <div>Proyecto no encontrado</div>;
 
   return (
     <>
-      <ClipDefs />
-
-      {/* Modal para ampliar imagen */}
+      {/* Modal simple, sin animaciones */}
       {selectedImage && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/75"
           onClick={() => setSelectedImage(null)}
         >
           <img
             src={selectedImage}
             alt="Vista ampliada"
-            className="max-w-[90%] max-h-[90%] rounded-lg shadow-2xl"
+            className="max-w-[90%] max-h-[90%] rounded-lg"
           />
         </div>
       )}
 
-      <section className="w-full p-4 sm:p-6 md:p-10 lg:p-16">
-        {/* CABECERA */}
-        <section className="w-full mx-auto px-4 py-8">
-          <div className="w-full text-4xl font-champion mb-8 border-b border-white">
-            <h1 className="mb-2">{project.name}</h1>
-          </div>
-
-          {/* Portada con sombra blanca */}
-          {project.cover && (
-            <div className="relative w-fit mx-auto mb-10 after:content-[''] after:absolute after:inset-0 after:rounded-3xl after:shadow-[8px_8px_0px_white] after:-z-10 after:translate-x-2 after:translate-y-2">
-              <img
-                src={project.cover}
-                alt={`Portada de ${project.name}`}
-                className="w-[300px] sm:w-[350px] md:w-[350px] lg:w-[400px] xl:w-[600px] h-auto object-cover"
-                style={{ clipPath: 'url(#clip-pattern2)' }}
-                fetchPriority="high"
-              />
-            </div>
-          )}
-        </section>
-
-        {/* Secciones */}
-{project.sections
-  ?.filter(s => ['description', 'technologies', 'history'].includes(s.type))
-  .map((section, index) => (
-    <div key={index} className="px-4 md:px-10 lg:px-32 py-16 max-w-7xl mx-auto">
-      {section.title && (
-        <h2 className="text-2xl md:text-3xl font-bold mb-10 text-center">
-          {section.title}
-        </h2>
-      )}
-
-      {section.description && (
-        <p className="mb-6 text-justify max-w-3xl mx-auto leading-relaxed text-lg">
-          {section.description}
-        </p>
-      )}
-
-      {section.url && (
-        <div className="text-center mb-6">
-          <a
-            href={section.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="uppercase text-white hover:text-blue-200 underline text-lg"
-          >
-            Ver sitio
-          </a>
-        </div>
-      )}
-
-      {Array.isArray(section.images) && section.images.length > 0 && (
-        <div
-          className={`${
-            section.type === 'technologies'
-              ? 'flex justify-center gap-6 flex-wrap'
-              : 'flex flex-col items-center gap-8'
-          }`}
-        >
-          {section.images.map((img, i) => (
+      <section className="w-full px-4 sm:px-8 md:px-16 py-16 bg-neutral-950 text-neutral-200">
+        {project.sections
+          ?.filter((s) =>
+            ["description", "technologies", "history"].includes(s.type)
+          )
+          .map((section, index) => (
             <div
-              key={i}
-              className={`${
-                section.type === 'technologies' ? 'w-16 h-16' : 'w-full max-w-3xl'
-              }`}
+              key={index}
+              className="max-w-4xl mx-auto mb-24 border-b border-neutral-800 pb-16"
             >
-              <img
-                src={img}
-                alt={`Imagen ${i + 1}`}
-                className={`${
-                  section.type === 'technologies'
-                    ? 'w-full h-full object-contain'
-                    : 'w-full h-auto object-cover mt-[50px] sm:mt-[70px] md:mt-[70px] lg:mt-[40px] xl:mt-[100px]'
-                }`}
-                loading="lazy"
-              />
+              {/* Título limpio */}
+              {section.title && (
+                <h2 className="text-3xl font-semibold text-center mb-10">
+                  {section.title}
+                </h2>
+              )}
+
+              {/* Descripción ordenada */}
+              {section.description && (
+                <p className="text-lg leading-relaxed text-neutral-300 mb-12 text-center">
+                  {section.description}
+                </p>
+              )}
+
+              {/* Link */}
+              {section.url && (
+                <div className="text-center mb-12">
+                  <a
+                    href={section.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block px-5 py-2 border border-neutral-600 rounded-md text-neutral-200 hover:bg-neutral-800 transition"
+                  >
+                    Ver sitio
+                  </a>
+                </div>
+              )}
+
+              {/* CONTENIDO VISUAL */}
+              {Array.isArray(section.images) && section.images.length > 0 && (
+                <>
+                  {/* Tecnologías: fila muy limpia */}
+                  {section.type === "technologies" ? (
+                    <div className="flex flex-wrap justify-center gap-10">
+                      {section.images.map((img, i) => (
+                        <div key={i} className="w-14 h-14 opacity-80">
+                          <img
+                            src={img}
+                            alt={`Tecnología ${i + 1}`}
+                            className="w-full h-full object-contain"
+                          />
+                        </div>
+                      ))}
+                    </div>
+                  ) : (
+                    /* Imágenes de proyecto: enfoque limpio sin efectos */
+                    <div className="space-y-20">
+                      {section.images.map((img, i) => (
+                        <div
+                          key={i}
+                          className="w-full max-w-3xl mx-auto cursor-pointer"
+                          onClick={() => setSelectedImage(img)}
+                        >
+                          <img
+                            src={img}
+                            alt={`Imagen ${i + 1}`}
+                            className="w-full h-auto rounded-lg object-cover"
+                            loading="lazy"
+                          />
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </>
+              )}
             </div>
           ))}
-        </div>
-      )}
-    </div>
-  ))}
-
       </section>
     </>
   );

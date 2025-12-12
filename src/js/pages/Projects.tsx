@@ -23,6 +23,9 @@ export default function Projects() {
           {/* Imagen sobre texto GHOPS */}
           <div className="relative w-full md:w-1/2 flex items-center justify-center h-[300px] sm:h-[350px] md:h-[400px]">
             {/* Imagen encima */}
+            <span className="absolute inset-0 flex items-center justify-center font-champion uppercase text-[130px] sm:text-[200px] md:text-[150px] lg:text-[240px] clr-g z-0 select-none pointer-events-none animate__animated animate__rubberBand">
+              ###
+            </span>
             <img
               src={characterprojects}
               alt="projects"

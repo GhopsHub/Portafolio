@@ -9,7 +9,7 @@ import sakurarent2 from "../assets/images/Projects/SakuraRent/sakura2.png";
 import sakurarent3 from "../assets/images/Projects/SakuraRent/sakura3.png";
 
 // IMAGENES STAMPURR
-import stampurr from "../assets/images/Projects/StamPurr/stampurr1.webp";
+// import stampurr from "../assets/images/Projects/StamPurr/stampurr1.webp";
 
 // TECHNOLOGIES
 import css from "../assets/images/Technologies/css.svg";
@@ -96,7 +96,7 @@ export const workData: WorkItem[] = [
         title: "De dónde nació StamPurr",
         description:
           "StamPurr es una pagina que buca crear productos personalizados, como tazas, camisetas, etc. Se desarrolló en 2025 con el objetivo de crear una marca que refleje la pasion por el arte y la personalización. Con un enfoque en la calidad y la atención al detalle, StamPurr busca ofrecer a sus clientes productos únicos que cuenten una historia.",
-        images: [stampurr],
+        images: [],
       },
     ],
   },

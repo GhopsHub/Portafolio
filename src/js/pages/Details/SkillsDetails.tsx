@@ -1,21 +1,21 @@
-import { useState } from "react"
-import { useParams } from "react-router-dom"
-import { skillsData } from "../../../data/skillsData"
-import ClipDefs from "../../components/Animations/ImageMask/ImageMask"
-import type { LucideIcon } from "lucide-react"
+import { useState } from "react";
+import { useParams } from "react-router-dom";
+import { skillsData } from "../../../data/skillsData";
+// import ClipDefs from "../../components/Animations/ImageMask/ImageMask"
+import type { LucideIcon } from "lucide-react";
 
 export default function SkillDetail() {
-  const { slug } = useParams()
-  const skill = skillsData.find(s => s.slug === slug)
-  const [selectedImage, setSelectedImage] = useState<string | null>(null)
+  const { slug } = useParams();
+  const skill = skillsData.find((s) => s.slug === slug);
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
-  if (!skill) return <div>Habilidad no encontrada</div>
+  if (!skill) return <div>Habilidad no encontrada</div>;
 
-  const Icon = skill.icon as LucideIcon
+  const Icon = skill.icon as LucideIcon;
 
   return (
     <>
-      <ClipDefs />
+      {/* <ClipDefs /> */}
 
       {/* Modal de imagen ampliada */}
       {selectedImage && (
@@ -49,7 +49,10 @@ export default function SkillDetail() {
 
         {/* SECCIONES */}
         {skill.sections?.map((section, index) => (
-          <div key={index} className="px-4 md:px-10 lg:px-32 py-16 max-w-7xl mx-auto">
+          <div
+            key={index}
+            className="px-4 md:px-10 lg:px-32 py-16 max-w-7xl mx-auto"
+          >
             {section.title && (
               <h2 className="text-2xl md:text-3xl font-bold mb-10 text-center text-white">
                 {section.title}
@@ -81,5 +84,5 @@ export default function SkillDetail() {
         ))}
       </section>
     </>
-  )
+  );
 }
