@@ -28,7 +28,7 @@ export type WorkItem = {
   cover?: string;
   sections?: {
     type?: string;
-    title?: string;
+    title?: string;workdata
     description?: string;
     images?: string[];
     url?: string;
@@ -49,7 +49,7 @@ export const workData: WorkItem[] = [
         type: "description",
         title: "¿Qué es SakuraRent?",
         description:
-          "Plataforma digital para alquilar vehículos de forma rápida, segura y eficiente. Disponible en versión web y móvil, conecta a propietarios y usuarios en una experiencia fluida centrada en la sostenibilidad y la movilidad inteligente.",
+          "SakurRent es un prototipo de una plataforma de alquiler de vehículos, creada principalmente como un proyecto de aprendizaje para explorar el desarrollo web utilizando Laravel y React. La plataforma está diseñada para usuarios y administradores, cada uno con funcionalidades especificas. Los usuarios pueden registrarse, iniciar sesión, buscar vehículos disponibles, realizar reservas y gestionar sus alquileres. Por otro lado, los administradores tienen la capacidad de gestionar el inventario de vehículos, revisar reservas y mantener la plataforma actualizada. Aunque es un prototipo, SakuraRent busca ofrecer una experiencia intuitiva y funcional, sirviendo como una base sólida para futuros desarrollos en el ámbito del desarrollo web y la gestión de proyectos.",
         images: [sakurarent, sakurarent1, sakurarent2, sakurarent3],
       },
       {
@@ -62,7 +62,7 @@ export const workData: WorkItem[] = [
         type: "history",
         title: "De dónde nació SakuraRent",
         description:
-          "SakuraRent fue creada en 2025 como respuesta a la necesidad de una forma más accesible, rápida y responsable de alquilar vehículos. Pensada para conectar dueños de autos con personas que necesitan movilidad temporal, la plataforma apuesta por una experiencia sencilla y moderna. Con un enfoque en la sostenibilidad, SakuraRent promueve el uso compartido de recursos, reduciendo el impacto ambiental y optimizando la disponibilidad de vehículos.",
+          "SakuraRent fue creada en 2025 como respuesta a la necesidad de desarrollar un proyecto práctico que me permitiera aplicar y consolidar mis conocimientos en Laravel y React. El objetivo principal era construir una plataforma de alquiler de vehículos que ofreciera una experiencia de usuario fluida y eficiente, tanto para los clientes como para los administradores. A través de este proyecto, busqué explorar las mejores prácticas en el desarrollo web, la gestión de bases de datos y la implementación de interfaces intuitivas, con la intención de sentar las bases para futuros proyectos más complejos en el ámbito del desarrollo web y la gestión de proyectos.",
         images: [],
       },
     ],

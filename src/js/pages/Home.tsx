@@ -95,14 +95,13 @@ export default function Home() {
               typescript,
               mysql,
               prettier,
-              jwt,
             ],
             title: "Stack principal",
             subtitle:
-              "Conjunto de tecnologías que conforman mi base principal de desarrollo.",
+              "Conjunto de tecnologías que conforman mi base principal de desarrollo como programador junior, con un enfoque en el desarrollo web full stack.",
           },
           {
-            images: [nodejs, threejs, docker, ubuntu],
+            images: [nodejs, threejs, docker, ubuntu, jwt],
             title: "Exploración tecnológica",
             subtitle:
               "Herramientas que he utilizado en pruebas, prototipos y ejercicios asistidos por IA.",
