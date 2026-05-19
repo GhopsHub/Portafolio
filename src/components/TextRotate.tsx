@@ -10,7 +10,7 @@ import {
 import { AnimatePresence, motion } from "framer-motion"
 import type { AnimatePresenceProps, MotionProps, Transition } from "framer-motion"
 
-import { cn } from "../../../../lib/utils"
+import { cn } from "../lib/utils"
 
 interface TextRotateProps {
     texts: string[]

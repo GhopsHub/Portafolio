@@ -10,7 +10,7 @@ import {
   useMotionValue,
 } from 'framer-motion';
 import { wrap } from '@motionone/utils';
-import { cn } from '../../../../lib/utils';
+import { cn } from '../lib/utils';
 
 interface MarqueeProps {
   children: string;

@@ -10,3 +10,179 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --ink: #17130f;
+  --paper: #f5dfb8;
+  --cream: #fff3d6;
+  --orange: #f05d23;
+  --yellow: #f7c948;
+  --mint: #33c7a2;
+  --cyan: #3aa7d8;
+  --plum: #5a3f8f;
+  --line: #17130f;
+}
+
+body {
+  color: var(--ink);
+  background:
+    linear-gradient(rgba(23, 19, 15, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(23, 19, 15, 0.05) 1px, transparent 1px),
+    radial-gradient(circle at 20% 0%, rgba(240, 93, 35, 0.22), transparent 30%),
+    radial-gradient(circle at 90% 20%, rgba(58, 167, 216, 0.18), transparent 26%),
+    var(--paper);
+  background-size: 28px 28px, 28px 28px, auto, auto, auto;
+}
+
+::selection {
+  color: var(--cream);
+  background: var(--orange);
+}
+
+.page-wrapper {
+  position: relative;
+}
+
+.page-wrapper::before {
+  content: "";
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(23, 19, 15, 0.05),
+    rgba(23, 19, 15, 0.05) 1px,
+    transparent 1px,
+    transparent 5px
+  );
+  mix-blend-mode: multiply;
+}
+
+.retro-shell {
+  width: min(1180px, calc(100% - 32px));
+  margin-inline: auto;
+}
+
+.retro-card {
+  border: 2px solid var(--line);
+  background: var(--cream);
+  box-shadow: 8px 8px 0 var(--ink);
+}
+
+.retro-card-alt {
+  border: 2px solid var(--line);
+  background: #17130f;
+  color: var(--cream);
+  box-shadow: 8px 8px 0 var(--orange);
+}
+
+.retro-heading {
+  color: var(--ink);
+  text-shadow: 3px 3px 0 var(--yellow);
+}
+
+.retro-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: fit-content;
+  border: 2px solid var(--line);
+  background: var(--mint);
+  color: var(--ink);
+  padding: 0.35rem 0.7rem;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  box-shadow: 4px 4px 0 var(--ink);
+}
+
+.retro-link {
+  border: 2px solid var(--line);
+  background: var(--cream);
+  color: var(--ink);
+  box-shadow: 4px 4px 0 var(--ink);
+  transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+}
+
+.retro-link:hover,
+.retro-link-active {
+  transform: translate(3px, 3px);
+  box-shadow: 1px 1px 0 var(--ink);
+  background: var(--yellow);
+}
+
+.retro-hero {
+  min-height: calc(100vh - 84px);
+  display: grid;
+  align-items: center;
+  padding-block: clamp(3rem, 8vw, 6rem);
+}
+
+.retro-visual {
+  position: relative;
+  min-height: clamp(260px, 42vw, 430px);
+  display: grid;
+  place-items: center;
+}
+
+.retro-visual::before {
+  content: "";
+  position: absolute;
+  width: min(78%, 380px);
+  aspect-ratio: 1;
+  border: 2px solid var(--line);
+  background:
+    linear-gradient(135deg, var(--yellow) 0 25%, var(--orange) 25% 50%, var(--cyan) 50% 75%, var(--mint) 75%);
+  box-shadow: 10px 10px 0 var(--ink);
+  transform: rotate(-4deg);
+}
+
+.retro-visual img {
+  position: relative;
+  z-index: 1;
+  filter: drop-shadow(8px 10px 0 rgba(23, 19, 15, 0.35));
+}
+
+.retro-big-word {
+  position: absolute;
+  z-index: 0;
+  font-family: ChampionGothic, Impact, sans-serif;
+  font-size: clamp(6rem, 18vw, 15rem);
+  line-height: 0.8;
+  color: rgba(23, 19, 15, 0.08);
+  text-transform: uppercase;
+  user-select: none;
+}
+
+.retro-section-title {
+  width: min(1180px, calc(100% - 32px));
+  margin: clamp(4rem, 8vw, 6rem) auto 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  border-block: 2px solid var(--line);
+  padding-block: 1rem;
+}
+
+.retro-chip {
+  border: 2px solid var(--line);
+  background: var(--cream);
+  color: var(--ink);
+  padding: 0.35rem 0.65rem;
+  box-shadow: 3px 3px 0 var(--ink);
+}
+
+@media (max-width: 640px) {
+  .retro-card,
+  .retro-card-alt {
+    box-shadow: 5px 5px 0 var(--ink);
+  }
+
+  .retro-section-title {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+

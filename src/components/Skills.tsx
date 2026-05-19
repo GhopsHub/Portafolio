@@ -18,6 +18,10 @@ export function Skills({ items, className }: SkillsProps) {
   const [isAnimating, setIsAnimating] = React.useState(true);
 
   const containerRef = React.useRef<HTMLDivElement>(null);
+  const startX = React.useRef(0);
+  const startY = React.useRef(0);
+  const isDragging = React.useRef(false);
+  const isHorizontalSwipe = React.useRef(false);
 
   const goTo = (i: number) => {
     setIsAnimating(true);
@@ -40,15 +44,10 @@ export function Skills({ items, className }: SkillsProps) {
         setIndex(1);
       }
     };
+
     el.addEventListener("transitionend", handleEnd);
     return () => el.removeEventListener("transitionend", handleEnd);
   }, [index, realLength]);
-
-  // ========= MEJOR SWIPE MÓVIL =============
-  const startX = React.useRef(0);
-  const startY = React.useRef(0);
-  const isDragging = React.useRef(false);
-  const isHorizontalSwipe = React.useRef(false);
 
   const handleTouchStart = (e: React.TouchEvent) => {
     startX.current = e.touches[0].clientX;
@@ -63,14 +62,13 @@ export function Skills({ items, className }: SkillsProps) {
     const dx = e.touches[0].clientX - startX.current;
     const dy = e.touches[0].clientY - startY.current;
 
-    // Detectamos si la intención es vertical
     if (!isHorizontalSwipe.current) {
       if (Math.abs(dy) > Math.abs(dx)) {
-        // scroll vertical → dejar pasar
         isDragging.current = false;
         return;
-      } else if (Math.abs(dx) > 10) {
-        // swipe horizontal detectado
+      }
+
+      if (Math.abs(dx) > 10) {
         isHorizontalSwipe.current = true;
       }
     }
@@ -86,17 +84,15 @@ export function Skills({ items, className }: SkillsProps) {
     }
   };
 
-  const handleTouchEnd = () => {
-    isDragging.current = false;
-  };
-
   return (
-    <div className={`relative w-full max-w-xl mx-auto ${className || ""}`}>
+    <div className={`retro-card relative mx-auto w-full max-w-3xl p-4 ${className || ""}`}>
       <div
-        className="overflow-hidden"
+        className="overflow-hidden border-2 border-[var(--line)] bg-[var(--paper)]"
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
-        onTouchEnd={handleTouchEnd}
+        onTouchEnd={() => {
+          isDragging.current = false;
+        }}
       >
         <div
           ref={containerRef}
@@ -109,64 +105,59 @@ export function Skills({ items, className }: SkillsProps) {
           {extended.map((item, i) => (
             <div
               key={i}
-              className="min-w-full px-6 py-10 text-center flex flex-col items-center justify-center"
+              className="flex min-w-full flex-col items-center justify-center px-6 py-10 text-center"
             >
               {item.image && (
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className="mx-auto h-14 w-auto mb-6"
-                />
+                <img src={item.image} alt={item.title} className="mx-auto mb-6 h-14 w-auto" />
               )}
 
               {item.images && (
-                <div className="flex flex-wrap justify-center gap-7 mb-8">
+                <div className="mb-8 flex flex-wrap justify-center gap-4">
                   {item.images.map((img, idx) => (
-                    <img
-                      key={idx}
-                      src={img}
-                      alt={`${item.title}-${idx}`}
-                      className="h-12 w-auto"
-                    />
+                    <span key={idx} className="retro-chip grid h-16 min-w-16 place-items-center bg-white">
+                      <img src={img} alt={`${item.title}-${idx}`} className="h-10 w-auto" />
+                    </span>
                   ))}
                 </div>
               )}
 
-              <h3 className="text-2xl font-semibold">{item.title}</h3>
+              <h3 className="font-champion text-4xl uppercase">{item.title}</h3>
               {item.subtitle && (
-                <p className="text-lg mt-2 opacity-80">{item.subtitle}</p>
+                <p className="mt-3 max-w-xl text-base font-semibold leading-relaxed sm:text-lg">
+                  {item.subtitle}
+                </p>
               )}
             </div>
           ))}
         </div>
       </div>
 
-      {/* BOTONES SOLO DESKTOP */}
       <button
+        type="button"
         onClick={prev}
-        className="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2
-        bg-black/10 hover:bg-black/20 backdrop-blur p-2 rounded-full transition"
+        aria-label="Anterior"
+        className="retro-link absolute left-0 top-1/2 hidden h-11 w-11 -translate-x-1/2 -translate-y-1/2 items-center justify-center text-3xl font-black md:flex"
       >
         ‹
       </button>
 
       <button
+        type="button"
         onClick={next}
-        className="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2
-        bg-black/10 hover:bg-black/20 backdrop-blur p-2 rounded-full transition"
+        aria-label="Siguiente"
+        className="retro-link absolute right-0 top-1/2 hidden h-11 w-11 -translate-y-1/2 translate-x-1/2 items-center justify-center text-3xl font-black md:flex"
       >
         ›
       </button>
 
-      {/* INDICADORES (DOTS) SOLO MÓVIL */}
-      <div className="flex md:hidden justify-center gap-2 mt-4">
+      <div className="mt-4 flex justify-center gap-2 md:hidden">
         {items.map((_, i) => {
           const isActive = index === i + 1;
           return (
-            <div
+            <span
               key={i}
-              className={`h-2 w-2 rounded-full transition ${
-                isActive ? "bg-gray-900 scale-110" : "bg-gray-400"
+              className={`h-2 w-6 border border-[var(--line)] transition ${
+                isActive ? "bg-[var(--orange)]" : "bg-[var(--ink)]/20"
               }`}
             />
           );
