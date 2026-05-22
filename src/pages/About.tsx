@@ -53,7 +53,6 @@ export default function About() {
           </div>
 
           <div className="retro-visual">
-            <span className="retro-big-word">bio</span>
             <img
               src={characterabout}
               alt="about"

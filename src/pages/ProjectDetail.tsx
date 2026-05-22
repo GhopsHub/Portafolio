@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Icon } from "@iconify/react";
 import { useParams } from "react-router-dom";
 import { workData } from "../data/workData";
 
@@ -66,41 +67,46 @@ export default function ProjectDetail() {
                 </div>
               )}
 
-              {Array.isArray(section.images) && section.images.length > 0 && (
-                <>
-                  {section.type === "technologies" ? (
-                    <div className="flex flex-wrap justify-center gap-4">
-                      {section.images.map((img, i) => (
-                        <div key={i} className="retro-chip grid h-16 w-16 place-items-center bg-white">
-                          <img
-                            src={img}
-                            alt={`Tecnologia ${i + 1}`}
-                            className="h-10 w-10 object-contain"
-                          />
-                        </div>
-                      ))}
-                    </div>
-                  ) : (
-                    <div className="space-y-8">
-                      {section.images.map((img, i) => (
-                        <button
-                          type="button"
-                          key={i}
-                          className="mx-auto block w-full max-w-3xl border-2 border-[var(--line)] bg-[var(--paper)] p-2 text-left shadow-[6px_6px_0_var(--ink)]"
-                          onClick={() => setSelectedImage(img)}
-                        >
-                          <img
-                            src={img}
-                            alt={`Imagen ${i + 1}`}
-                            className="h-auto w-full object-cover"
-                            loading="lazy"
-                          />
-                        </button>
-                      ))}
-                    </div>
-                  )}
-                </>
-              )}
+              {section.type === "technologies" &&
+                Array.isArray(section.icons) &&
+                section.icons.length > 0 && (
+                  <div className="flex flex-wrap justify-center gap-4">
+                    {section.icons.map((icon, i) => (
+                      <div
+                        key={icon}
+                        className="retro-chip grid h-16 w-16 place-items-center bg-white"
+                      >
+                        <Icon
+                          icon={icon}
+                          aria-label={`Tecnologia ${i + 1}`}
+                          className="h-10 w-10"
+                        />
+                      </div>
+                    ))}
+                  </div>
+                )}
+
+              {section.type !== "technologies" &&
+                Array.isArray(section.images) &&
+                section.images.length > 0 && (
+                  <div className="space-y-8">
+                    {section.images.map((img, i) => (
+                      <button
+                        type="button"
+                        key={i}
+                        className="mx-auto block w-full max-w-3xl border-2 border-[var(--line)] bg-[var(--paper)] p-2 text-left shadow-[6px_6px_0_var(--ink)]"
+                        onClick={() => setSelectedImage(img)}
+                      >
+                        <img
+                          src={img}
+                          alt={`Imagen ${i + 1}`}
+                          className="h-auto w-full object-cover"
+                          loading="lazy"
+                        />
+                      </button>
+                    ))}
+                  </div>
+                )}
             </article>
           ))}
       </section>

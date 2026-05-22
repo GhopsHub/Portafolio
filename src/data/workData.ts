@@ -11,14 +11,6 @@ import sakurarent3 from "../assets/images/Projects/SakuraRent/sakura3.png";
 // IMAGENES STAMPURR
 // import stampurr from "../assets/images/Projects/StamPurr/stampurr1.webp";
 
-// TECHNOLOGIES
-import css from "../assets/images/Technologies/css.svg";
-import laravel from "../assets/images/Technologies/laravel.svg";
-import mysql from "../assets/images/Technologies/mysql.svg";
-import react from "../assets/images/Technologies/react_wordmark_dark.svg";
-import tailwind from "../assets/images/Technologies/tailwindcss-wordmark-dark.svg";
-import typescript from "../assets/images/Technologies/typescript.svg";
-
 export type WorkItem = {
   name: string;
   type: string;
@@ -31,6 +23,7 @@ export type WorkItem = {
     title?: string;workdata
     description?: string;
     images?: string[];
+    icons?: string[];
     url?: string;
   }[];
 };
@@ -56,7 +49,13 @@ export const workData: WorkItem[] = [
         type: "technologies",
         title: "Tecnologías",
         description: "",
-        images: [css, laravel, mysql, tailwind, typescript],
+        icons: [
+          "logos:css-3",
+          "logos:laravel",
+          "logos:mysql-icon",
+          "logos:tailwindcss-icon",
+          "logos:typescript-icon",
+        ],
       },
       {
         type: "history",
@@ -89,7 +88,7 @@ export const workData: WorkItem[] = [
         type: "technologies",
         title: "Tecnologías",
         description: "",
-        images: [react, tailwind],
+        icons: ["logos:react", "logos:tailwindcss-icon"],
       },
       {
         type: "history",

@@ -12,6 +12,7 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "@iconify/react": "^6.0.2",
     "@motionone/utils": "^10.18.0",
     "animate.css": "^4.1.1",
     "clsx": "^2.1.1",

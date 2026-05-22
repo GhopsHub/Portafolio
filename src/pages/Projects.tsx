@@ -20,7 +20,6 @@ export default function Projects() {
           </div>
 
           <div className="retro-visual">
-            <span className="retro-big-word">work</span>
             <img
               src={characterprojects}
               alt="projects"

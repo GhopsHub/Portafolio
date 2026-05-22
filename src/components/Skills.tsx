@@ -1,9 +1,11 @@
 import React from "react";
+import { Icon } from "@iconify/react";
 
 interface SkillsProps {
   items: {
     image?: string;
     images?: string[];
+    icons?: string[];
     title: string;
     subtitle?: string;
   }[];
@@ -116,6 +118,23 @@ export function Skills({ items, className }: SkillsProps) {
                   {item.images.map((img, idx) => (
                     <span key={idx} className="retro-chip grid h-16 min-w-16 place-items-center bg-white">
                       <img src={img} alt={`${item.title}-${idx}`} className="h-10 w-auto" />
+                    </span>
+                  ))}
+                </div>
+              )}
+
+              {item.icons && (
+                <div className="mb-8 flex flex-wrap justify-center gap-4">
+                  {item.icons.map((icon, idx) => (
+                    <span
+                      key={icon}
+                      className="retro-chip grid h-16 min-w-16 place-items-center bg-white"
+                    >
+                      <Icon
+                        icon={icon}
+                        className="h-10 w-10"
+                        aria-label={`${item.title}-${idx}`}
+                      />
                     </span>
                   ))}
                 </div>

@@ -1,5 +1,5 @@
 import { useLocation, useNavigate } from "react-router-dom";
-import { Instagram, Mail, Music2 } from "lucide-react";
+import { Instagram, Mail } from "lucide-react";
 import logo from "../assets/images/ghops.png";
 
 const socials = [
@@ -12,11 +12,6 @@ const socials = [
     label: "Instagram",
     href: "https://www.instagram.com/ghops_ing/",
     icon: Instagram,
-  },
-  {
-    label: "TikTok",
-    href: "https://www.tiktok.com/@ghops_ongs",
-    icon: Music2,
   },
 ];
 
@@ -47,7 +42,9 @@ export default function Footer() {
             className="h-11 w-11 border-2 border-[var(--cream)] bg-[var(--yellow)] p-1"
           />
           <span>
-            <span className="block font-champion text-4xl uppercase">ghops</span>
+            <span className="block font-champion text-4xl uppercase">
+              ghops
+            </span>
             <span className="text-sm font-bold uppercase tracking-[0.18em] text-[var(--yellow)]">
               web retro, codigo moderno
             </span>

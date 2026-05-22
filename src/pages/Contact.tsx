@@ -1,6 +1,6 @@
 import charactercontact from "../assets/images/Characters/charactercontact.webp";
 import { ButtonPages } from "../components/ButtonPages";
-import { Instagram, Mail, MapPin, Music2 } from "lucide-react";
+import { Instagram, Mail, MapPin } from "lucide-react";
 
 export default function Contact() {
   return (
@@ -19,7 +19,6 @@ export default function Contact() {
           </div>
 
           <div className="retro-visual">
-            <span className="retro-big-word">hola</span>
             <img
               src={charactercontact}
               alt="contact"
@@ -58,15 +57,6 @@ export default function Contact() {
             >
               <Instagram className="h-4 w-4" />
               Instagram
-            </a>
-            <a
-              href="https://www.tiktok.com/@ghops_ongs"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="retro-chip flex items-center gap-2 font-black uppercase"
-            >
-              <Music2 className="h-4 w-4" />
-              TikTok
             </a>
           </div>
         </article>
