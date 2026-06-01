@@ -87,7 +87,9 @@ export function Skills({ items, className }: SkillsProps) {
   };
 
   return (
-    <div className={`retro-card relative mx-auto w-full max-w-3xl p-4 ${className || ""}`}>
+    <div
+      className={`retro-card relative mx-auto w-full max-w-3xl p-4 ${className || ""}`}
+    >
       <div
         className="overflow-hidden border-2 border-[var(--line)] bg-[var(--paper)]"
         onTouchStart={handleTouchStart}
@@ -110,14 +112,25 @@ export function Skills({ items, className }: SkillsProps) {
               className="flex min-w-full flex-col items-center justify-center px-6 py-10 text-center"
             >
               {item.image && (
-                <img src={item.image} alt={item.title} className="mx-auto mb-6 h-14 w-auto" />
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="mx-auto mb-6 h-14 w-auto"
+                />
               )}
 
               {item.images && (
                 <div className="mb-8 flex flex-wrap justify-center gap-4">
                   {item.images.map((img, idx) => (
-                    <span key={idx} className="retro-chip grid h-16 min-w-16 place-items-center bg-white">
-                      <img src={img} alt={`${item.title}-${idx}`} className="h-10 w-auto" />
+                    <span
+                      key={idx}
+                      className="retro-chip grid h-16 min-w-16 place-items-center bg-white"
+                    >
+                      <img
+                        src={img}
+                        alt={`${item.title}-${idx}`}
+                        className="h-10 w-auto"
+                      />
                     </span>
                   ))}
                 </div>
@@ -155,7 +168,7 @@ export function Skills({ items, className }: SkillsProps) {
         type="button"
         onClick={prev}
         aria-label="Anterior"
-        className="retro-link absolute left-0 top-1/2 hidden h-11 w-11 -translate-x-1/2 -translate-y-1/2 items-center justify-center text-3xl font-black md:flex"
+        className="retro-link absolute left-0 top-1/2 hidden h-11 w-11  items-center justify-center text-3xl font-black md:flex"
       >
         ‹
       </button>
@@ -164,7 +177,7 @@ export function Skills({ items, className }: SkillsProps) {
         type="button"
         onClick={next}
         aria-label="Siguiente"
-        className="retro-link absolute right-0 top-1/2 hidden h-11 w-11 -translate-y-1/2 translate-x-1/2 items-center justify-center text-3xl font-black md:flex"
+        className="retro-link absolute right-0 top-1/2 hidden h-11 w-11 items-center justify-center text-3xl font-black md:flex"
       >
         ›
       </button>

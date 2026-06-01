@@ -1,11 +1,12 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import { Instagram, Mail } from "lucide-react";
-import logo from "../assets/images/ghops.png";
+import logo from "../assets/images/logo/ghops.png";
 
 const socials = [
   {
     label: "Gmail",
     href: "https://mail.google.com/mail/?view=cm&to=julianbecerra432@gmail.com",
+    target: "_blank",
     icon: Mail,
   },
   {

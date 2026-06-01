@@ -13,8 +13,9 @@ export default function Contact() {
               Comencemos.
             </h1>
             <p className="mt-6 max-w-xl text-lg font-semibold leading-relaxed sm:text-xl">
-              Si tienes una idea, una pagina por mejorar o un proyecto en pausa,
-              podemos darle forma con una interfaz clara y funcional.
+              Estoy abierto a nuevos desafíos, colaboraciones y oportunidades
+              para seguir creciendo. Si tienes una idea o proyecto en mente,
+              conversemos y exploremos cómo hacerlo realidad.
             </p>
           </div>
 
@@ -34,7 +35,10 @@ export default function Contact() {
         <article className="retro-card p-5">
           <Mail className="mb-4 h-7 w-7 text-[var(--orange)]" />
           <h2 className="font-champion text-4xl uppercase">Email</h2>
-          <a className="mt-3 block break-words font-bold" href="mailto:julianbecerra432@gmail.com">
+          <a
+            className="mt-3 block break-words font-bold"
+            href="mailto:julianbecerra432@gmail.com"
+          >
             julianbecerra432@gmail.com
           </a>
         </article>
@@ -57,6 +61,15 @@ export default function Contact() {
             >
               <Instagram className="h-4 w-4" />
               Instagram
+            </a>
+
+            <a
+              href="https://mail.google.com/mail/?view=cm&to=julianbecerra432@gmail.com"
+              rel="noopener noreferrer"
+              className="retro-chip flex items-center gap-2 font-black uppercase"
+            >
+              <Mail className="h-4 w-4" />
+              Gmail
             </a>
           </div>
         </article>

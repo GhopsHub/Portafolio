@@ -14,8 +14,9 @@ export default function Projects() {
               Codigo con resultado.
             </h1>
             <p className="mt-6 max-w-xl text-lg font-semibold leading-relaxed sm:text-xl">
-              Una recopilacion de proyectos donde combino tecnologia, estructura
-              y criterio visual para resolver problemas reales.
+              Una recopilación de proyectos enfocados en desarrollo web,
+              automatización y herramientas creadas para resolver necesidades
+              reales.
             </p>
           </div>
 

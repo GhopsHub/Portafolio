@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { FolderKanban, Home, Menu, Send, UserRound, X } from "lucide-react";
-import logo from "../assets/images/ghops.png";
+import logo from "../assets/images/logo/ghops.png";
 
 const navItems = [
   { to: "/", label: "Inicio", icon: Home },
@@ -25,7 +25,9 @@ export default function Navbar() {
             <img src={logo} alt="Ghops" className="h-7 w-7 object-contain" />
           </span>
           <span className="leading-none">
-            <span className="block font-champion text-3xl uppercase">ghops</span>
+            <span className="block font-champion text-3xl uppercase">
+              ghops
+            </span>
             <span className="hidden text-xs font-bold uppercase tracking-[0.18em] sm:block">
               portfolio
             </span>
@@ -72,7 +74,9 @@ export default function Navbar() {
                 onClick={() => setIsOpen(false)}
                 className={({ isActive }) =>
                   `flex items-center justify-between border-2 border-[var(--cream)] px-4 py-3 font-black uppercase tracking-wide ${
-                    isActive ? "bg-[var(--yellow)] text-[var(--ink)]" : "bg-transparent"
+                    isActive
+                      ? "bg-[var(--yellow)] text-[var(--ink)]"
+                      : "bg-transparent"
                   }`
                 }
               >

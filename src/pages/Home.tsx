@@ -17,9 +17,8 @@ export default function Home() {
               Tu idea, mi codigo.
             </h1>
             <p className="mt-6 max-w-xl text-lg font-semibold leading-relaxed sm:text-xl">
-              Soy Julian, desarrollador full stack en formacion. Construyo
-              interfaces claras, funcionales y con personalidad para proyectos
-              web.
+              Soy Julián, desarrollador full stack. Diseño y construyo
+              experiencias web funcionales, escalables y visualmente cuidadas.
             </p>
             <div className="mt-7 flex flex-col gap-3 sm:flex-row">
               <ButtonPages
@@ -82,7 +81,7 @@ export default function Home() {
             ],
             title: "Stack principal",
             subtitle:
-              "Conjunto de tecnologias que conforman mi base principal de desarrollo como programador junior, con un enfoque en el desarrollo web full stack.",
+              "Herramientas y tecnologías que forman mi entorno principal de desarrollo.",
           },
           {
             icons: [
@@ -94,13 +93,13 @@ export default function Home() {
             ],
             title: "Exploracion tecnologica",
             subtitle:
-              "Herramientas que he utilizado en pruebas, prototipos y ejercicios asistidos por IA.",
+              "Herramientas utilizadas en prototipos, pruebas técnicas y desarrollo asistido por IA.",
           },
           {
             icons: ["devicon:canva", "skill-icons:wordpress", "logos:figma"],
             title: "Herramientas de diseno y maquetacion",
             subtitle:
-              "Experiencia en el uso de herramientas para estructurar y visualizar ideas de manera alineada al proyecto final.",
+              "Herramientas orientadas a la creación de interfaces, prototipos y estructuras visuales.",
           },
           {
             icons: [
@@ -111,19 +110,19 @@ export default function Home() {
             ],
             title: "Entorno de trabajo",
             subtitle:
-              "Ecosistema de herramientas que uso para colaborar, desarrollar y organizar proyectos.",
+              "Herramientas y servicios que utilizo para desarrollar, colaborar y gestionar proyectos.",
           },
           {
             icons: ["material-icon-theme:python"],
             title: "Skills en desarrollo",
             subtitle:
-              "Actualmente estoy ampliando mis conocimientos en Python y otras tecnologías enfocadas en automatización, desarrollo backend y herramientas modernas para la web.",
+              "Profundizando en Python y tecnologías enfocadas en automatización y desarrollo técnico.",
           },
           {
             icons: ["simple-icons:openai", "simple-icons:claude"],
             title: "Asistencia con IA",
             subtitle:
-              "Uso de inteligencia artificial para optimizar procesos y mejorar la productividad en mis proyectos.",
+              "Uso de inteligencia artificial como apoyo en procesos de desarrollo, automatización y productividad.",
           },
           {
             icons: [
@@ -133,7 +132,7 @@ export default function Home() {
             ],
             title: "Herramientas de edicion digital",
             subtitle:
-              "Conocimientos basicos en edicion de video e imagenes para contenido digital.",
+              "Experiencia básica en edición de imagen y video para contenido digital y recursos visuales.",
           },
         ]}
       />

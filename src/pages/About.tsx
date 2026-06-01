@@ -8,32 +8,42 @@ export default function About() {
     {
       id: 1,
       date: "2022 - 2023",
-      title: "Estudios de programacion",
+      title: "Formación en desarrollo de software",
       subtitle: "SENA",
       description:
-        "Estudie en el SENA, donde adquiri bases en desarrollo web, levantamiento de requerimientos, HTML, CSS, JavaScript, PHP y estructura de bases de datos con MySQL.",
-      tags: ["HTML", "CSS", "JavaScript", "PHP"],
+        "Durante mi formación adquirí fundamentos de programación, análisis de requerimientos, desarrollo web y gestión de bases de datos. Trabajé con tecnologías como HTML, CSS, JavaScript, PHP y MySQL, participando en proyectos que fortalecieron mi capacidad para diseñar y construir aplicaciones funcionales.",
+      tags: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
       icon: "study",
     },
     {
       id: 2,
       date: "2024",
-      title: "Primer trabajo como desarrollador",
-      subtitle: "Desarrollador web junior",
+      title: "Primer experiencia profesional",
+      subtitle: "Desarrollador Web Junior",
       description:
-        "En practicas apoye automatizacion de pruebas con PHPUnit, resolucion de problemas frontend y backend, trabajo colaborativo, Laravel, Vue.js y Git.",
-      tags: ["UI", "UX", "Laravel", "Vue.js", "Git"],
+        "Realicé mis prácticas profesionales colaborando en el desarrollo y mantenimiento de aplicaciones web. Participé en la automatización de pruebas, resolución de incidencias frontend y backend, control de versiones con Git y trabajo en equipo utilizando Laravel y Vue.js.",
+      tags: ["Laravel", "Vue.js", "PHPUnit", "Git"],
       icon: "work",
     },
     {
       id: 3,
       date: "2025",
-      title: "Freelance y proyectos personales",
-      subtitle: "Desarrollo y aprendizaje continuo",
+      title: "Proyectos freelance y desarrollo continuo",
+      subtitle: "Aprendizaje y construcción de soluciones",
       description:
-        "He creado proyectos personales y freelance con Laravel y React, cuidando interfaz, logica, backend y herramientas como Filament, Tailwind y Bootstrap.",
-      tags: ["Laravel", "React", "Vue.js", "Git", "Filament", "Tailwind", "Bootstrap"],
+        "He desarrollado proyectos personales y freelance enfocados en fortalecer mis conocimientos y explorar nuevas tecnologías. He trabajado en el diseño de interfaces, lógica de negocio, desarrollo backend e implementación de herramientas modernas como React, Laravel, Filament y Tailwind CSS.",
+      tags: ["Laravel", "React", "Filament", "Tailwind", "Git"],
       icon: "code",
+    },
+    {
+      id: 4,
+      date: "2026 - Actualidad",
+      title: "Profundización en Python",
+      subtitle: "Aprendizaje autodidacta",
+      description:
+        "Comencé a ampliar mis conocimientos en Python mediante proyectos personales, explorando automatización, estructuras de datos y desarrollo de aplicaciones.",
+      tags: ["Python"],
+      icon: "study",
     },
   ];
 
@@ -47,8 +57,12 @@ export default function About() {
               Quien soy?
             </h1>
             <p className="mt-6 max-w-xl text-lg font-semibold leading-relaxed sm:text-xl">
-              Soy un desarrollador en crecimiento, con enfoque en aprender rapido,
-              construir bien y convertir ideas en experiencias web utiles.
+              Soy una persona curiosa y constante que disfruta aprender,
+              resolver problemas y convertir ideas en proyectos reales.
+              Actualmente estoy construyendo mi camino como desarrollador,
+              fortaleciendo mis habilidades a través de la práctica y la
+              creación de soluciones tecnológicas que me permiten crecer y
+              enfrentar nuevos desafíos.
             </p>
           </div>
 
