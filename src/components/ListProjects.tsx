@@ -1,80 +1,38 @@
+import { ArrowUpRight, Star } from "lucide-react";
 import { Link } from "react-router-dom";
+import type { WorkItem } from "../data/workData";
 
-type WorkItem = {
-  name: string;
-  type: string;
-  technologies: string;
-  year: string;
-  slug: string;
-};
+type Props = { data: WorkItem[] };
 
-type Props = {
-  data: WorkItem[];
-};
-
-export const ListProjects = ({ data }: Props) => {
-  return (
-    <div className="w-full overflow-x-auto">
-      <table className="hidden w-full border-separate border-spacing-y-3 md:table">
-        <thead>
-          <tr className="text-left text-xs font-black uppercase tracking-[0.18em]">
-            <th className="px-4 pb-2">Proyecto</th>
-            <th className="px-4 pb-2">Tipo</th>
-            <th className="px-4 pb-2">Tecnologias</th>
-            <th className="px-4 pb-2">Año</th>
-          </tr>
-        </thead>
-
-        <tbody>
-          {data.map((item, idx) => (
-            <tr
-              key={idx}
-              className="group bg-[var(--cream)] text-[var(--ink)] shadow-[6px_6px_0_var(--ink)] transition-transform duration-200  hover:translate-y-1 hover:shadow-[2px_2px_0_var(--ink)]"
-            >
-              <td className="border-y-2 border-l-2 border-[var(--line)] px-4 py-5 font-champion text-3xl uppercase lg:text-4xl">
-                <Link
-                  to={`/projects/${item.slug}`}
-                  className="group-hover:text-[var(--orange)]"
-                >
-                  {item.name}
-                </Link>
-              </td>
-
-              <td className="border-y-2 border-[var(--line)] px-4 py-5 font-bold">
-                {item.type}
-              </td>
-              <td className="border-y-2 border-[var(--line)] px-4 py-5">
-                {item.technologies}
-              </td>
-              <td className="border-y-2 border-r-2 border-[var(--line)] px-4 py-5 font-black">
-                {item.year}
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-
-      <div className="grid gap-4 md:hidden">
-        {data.map((item, idx) => (
-          <article key={idx} className="retro-card p-4 text-sm">
-            <div className="mb-3 font-champion text-3xl uppercase">
-              <Link to={`/projects/${item.slug}`}>{item.name}</Link>
+export const ListProjects = ({ data }: Props) => (
+  <div className="project-board-list">
+    {data.map((item, index) => (
+      <Link
+        key={item.slug}
+        to={`/projects/${item.slug}`}
+        className={`project-board-card project-board-card-${index % 4}${index === 0 ? " project-board-card-featured" : ""}`}
+        style={{ animationDelay: `${Math.min(index * 75, 525)}ms` }}
+      >
+        <div className="project-board-card-top">
+          <h3>{item.name}</h3>
+          <Star aria-hidden="true" />
+        </div>
+        <div className="project-board-card-content">
+          <div className="project-board-cover">
+            {item.cover ? <img src={item.cover} alt={`Vista de ${item.name}`} loading="lazy" /> : <span>{item.name.slice(0, 1)}</span>}
+            <span className="project-board-index">{String(index + 1).padStart(2, "0")}</span>
+          </div>
+          <div className="project-board-info">
+            <div className="project-board-meta"><span>{item.type}</span><span>{item.year}</span></div>
+            <div className="project-board-techs">
+              {item.technologies.split(/[~·,]/).map((technology) => technology.trim()).filter(Boolean).map((technology) => (
+                <span key={technology}>{technology}</span>
+              ))}
             </div>
-            <div className="grid gap-2">
-              <p>
-                <span className="font-black uppercase">Tipo:</span> {item.type}
-              </p>
-              <p>
-                <span className="font-black uppercase">Tecnologias:</span>{" "}
-                {item.technologies}
-              </p>
-              <p>
-                <span className="font-black uppercase">Año:</span> {item.year}
-              </p>
-            </div>
-          </article>
-        ))}
-      </div>
-    </div>
-  );
-};
+            <span className="project-board-open">Explorar ficha <ArrowUpRight aria-hidden="true" size={19} /></span>
+          </div>
+        </div>
+      </Link>
+    ))}
+  </div>
+);

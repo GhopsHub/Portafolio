@@ -26,7 +26,7 @@ export const ButtonPages = ({
 }: ButtonPagesProps) => {
   if (left && right) {
     return (
-      <nav className="retro-shell my-16 grid gap-4 sm:grid-cols-2">
+      <nav className="page-navigation retro-shell my-16 grid gap-4 sm:grid-cols-2">
         <ButtonPages to={left.to} direction="left" className={className}>
           {left.label}
         </ButtonPages>
@@ -42,7 +42,7 @@ export const ButtonPages = ({
   return (
     <Link
       to={to}
-      className={`retro-link flex items-center justify-between gap-3 px-5 py-4 font-champion text-3xl uppercase ${className || ""}`}
+      className={`page-nav-button retro-link flex items-center justify-between gap-3 px-5 py-4 font-champion text-3xl uppercase ${className || ""}`}
     >
       {direction === "left" && <ArrowLeft className="h-6 w-6" />}
       <span>{children}</span>

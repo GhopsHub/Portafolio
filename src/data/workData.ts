@@ -146,7 +146,15 @@ export const workData: WorkItem[] = [
         title: "¿Qué es GhopSongs?",
         description:
           "GhopSongs es una plataforma web diseñada para ayudar a las personas a aprender inglés a través de la música. Su objetivo es ofrecer una forma más atractiva y natural de practicar el idioma, permitiendo a los usuarios comprender canciones mediante letras y traducciones presentadas de forma clara y accesible.",
-        images: [PortadaGhopsongs],
+        images: [
+          PortadaGhopsongs,
+          PortadaGhopsongs,
+          PortadaGhopsongs,
+          PortadaGhopsongs,
+          PortadaGhopsongs,
+          PortadaGhopsongs,
+          PortadaGhopsongs,
+        ],
       },
       {
         type: "technologies",

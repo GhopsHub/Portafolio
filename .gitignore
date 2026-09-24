@@ -24,5 +24,25 @@ dist-ssr
 *.sw?
 
 notes.md
-src/assets
+src/assets/images/
+src/assets/videos/
+# Multimedia local: no subir imágenes, vectores, audio ni video al repositorio.
+*.avif
+*.bmp
+*.gif
+*.ico
+*.jpeg
+*.jpg
+*.mp3
+*.mp4
+*.m4v
+*.mov
+*.ogg
+*.png
+*.svg
+*.wav
+*.webm
+*.webp
+*.tif
+*.tiff
 .pendientes.md

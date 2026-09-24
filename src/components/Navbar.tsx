@@ -1,21 +1,31 @@
 import { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
-import { FolderKanban, Home, Menu, Send, UserRound, X } from "lucide-react";
+import { Link, NavLink, useLocation } from "react-router-dom";
+import {
+  FolderKanban,
+  Clapperboard,
+  Home,
+  Menu,
+  Send,
+  UserRound,
+  X,
+} from "lucide-react";
 import logo from "../assets/images/logo/ghops.png";
 
 const navItems = [
   { to: "/", label: "Inicio", icon: Home },
   { to: "/projects/", label: "Proyectos", icon: FolderKanban },
+  { to: "/edits/", label: "Edits", icon: Clapperboard },
   { to: "/about/", label: "Sobre mi", icon: UserRound },
   { to: "/contact/", label: "Contacto", icon: Send },
 ];
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
 
   return (
-    <header className="sticky top-0 z-50 px-4 py-3">
-      <nav className="retro-shell retro-card flex items-center justify-between gap-4 px-3 py-3 sm:px-4">
+    <header className={`portfolio-header sticky top-0 z-50 px-4 py-3${location.pathname === "/contact/" ? " contact-header" : ""}`}>
+      <nav className="portfolio-nav retro-shell retro-card flex items-center justify-between gap-4 px-3 py-3 sm:px-4">
         <Link
           to="/"
           className="flex items-center gap-3"
@@ -41,7 +51,7 @@ export default function Navbar() {
                 to={to}
                 end={to === "/"}
                 className={({ isActive }) =>
-                  `retro-link flex items-center gap-2 px-4 py-2 text-sm font-black uppercase tracking-wide ${
+                  `site-nav-link retro-link flex items-center gap-2 px-4 py-2 text-sm font-black uppercase tracking-wide ${
                     isActive ? "retro-link-active" : ""
                   }`
                 }
@@ -58,14 +68,14 @@ export default function Navbar() {
           aria-label={isOpen ? "Cerrar menu" : "Abrir menu"}
           aria-expanded={isOpen}
           onClick={() => setIsOpen(!isOpen)}
-          className="retro-link grid h-11 w-11 place-items-center lg:hidden"
+          className="mobile-menu-button retro-link grid h-11 w-11 place-items-center lg:hidden"
         >
           {isOpen ? <X size={22} /> : <Menu size={22} />}
         </button>
       </nav>
 
       {isOpen && (
-        <ul className="retro-shell retro-card-alt mt-3 grid gap-2 p-3 lg:hidden">
+        <ul className="mobile-nav-panel retro-shell retro-card-alt mt-3 grid gap-2 p-3 lg:hidden">
           {navItems.map(({ to, label, icon: Icon }) => (
             <li key={to}>
               <NavLink
@@ -73,7 +83,7 @@ export default function Navbar() {
                 end={to === "/"}
                 onClick={() => setIsOpen(false)}
                 className={({ isActive }) =>
-                  `flex items-center justify-between border-2 border-[var(--cream)] px-4 py-3 font-black uppercase tracking-wide ${
+                  `mobile-nav-link flex items-center justify-between border-2 border-[var(--cream)] px-4 py-3 font-black uppercase tracking-wide ${
                     isActive
                       ? "bg-[var(--yellow)] text-[var(--ink)]"
                       : "bg-transparent"
